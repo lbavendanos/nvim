@@ -1,0 +1,10 @@
+{
+  // Explorer
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.enableVimDevicons": false,
+  "explorer.file.showHiddenFiles": true,
+  // TailwindCss
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.headwind.runOnSave": false
+  // ESLint
+}
