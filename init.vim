@@ -4,10 +4,12 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/mappings.vim
 
 " Theme
-source $HOME/.config/nvim/themes/material.vim
+" source $HOME/.config/nvim/themes/material.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
 " source $HOME/.config/nvim/themes/onedark.vim
 " source $HOME/.config/nvim/themes/palenight.vim
+source $HOME/.config/nvim/themes/nightfly.vim
+" source $HOME/.config/nvim/themes/moonfly.vim
 
 " Partials
 source $HOME/.config/nvim/partials/airline.vim

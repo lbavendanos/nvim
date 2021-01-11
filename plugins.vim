@@ -1,9 +1,11 @@
 call plug#begin('~/.vim/plugged')
   " Theme
-  Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+  " Plug 'kaicataldo/material.vim', { 'branch': 'main' }
   " Plug 'morhetz/gruvbox'
   " Plug 'joshdick/onedark.vim'
   " Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'bluz71/vim-nightfly-guicolors'
+  " Plug 'bluz71/vim-moonfly-colors'
   " Icons
   Plug 'ryanoasis/vim-devicons'
   " Status Bar
