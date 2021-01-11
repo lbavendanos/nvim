@@ -19,9 +19,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   " Commetary
-  " Plug 'preservim/nerdcommenter'
   Plug 'tomtom/tcomment_vim'
-  " Plug 'tpope/vim-commentary'
   " Intellisense
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Lint
