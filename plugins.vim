@@ -30,10 +30,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'editorconfig/editorconfig-vim'
   " Syntax Highlighting
   " Plug 'sheerun/vim-polyglot'
-  Plug 'StanAngeloff/php.vim'
-  Plug 'pangloss/vim-javascript'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'posva/vim-vue'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'StanAngeloff/php.vim'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'leafgarland/typescript-vim'
+  " Plug 'posva/vim-vue'
   " Complements
   Plug 'jiangmiao/auto-pairs'
 call plug#end()
