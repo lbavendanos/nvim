@@ -6,5 +6,4 @@
   // TailwindCss
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.headwind.runOnSave": false
-  // ESLint
 }
