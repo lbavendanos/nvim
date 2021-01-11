@@ -39,4 +39,5 @@ call plug#begin('~/.vim/plugged')
   " Plug 'posva/vim-vue'
   " Complements
   Plug 'jiangmiao/auto-pairs'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
