@@ -3,7 +3,6 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-phpls',
   \ 'coc-json',
-  \ 'coc-deno',
   \ 'coc-tsserver',
   \ 'coc-html',
   \ 'coc-css',
