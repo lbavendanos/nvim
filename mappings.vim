@@ -33,12 +33,20 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+" tnoremap <Esc> <C-\><C-n>
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 nnoremap <leader>z <C-w>w
 
 " Resize
-nnoremap <leader>+ :vertical resize +5<CR>
-nnoremap <leader>- :vertical resize -5<CR>
-nnoremap <leader>= <C-w>=
+nnoremap <silent> <leader><Up>    :resize -5<CR>
+nnoremap <silent> <leader><Down>  :resize +5<CR>
+nnoremap <silent> <leader><Left>  :vertical resize -5<CR>
+nnoremap <silent> <leader><Right> :vertical resize +5<CR>
+nnoremap <silent> <leader>= <C-w>=
 
 " Scroll
 map <S-Down> <C-E>
