@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugged')
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  " Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
   " Git
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
@@ -29,7 +28,6 @@ call plug#begin('~/.vim/plugged')
   " Editorconfig
   Plug 'editorconfig/editorconfig-vim'
   " Syntax Highlighting
-  " Plug 'sheerun/vim-polyglot'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   " Plug 'StanAngeloff/php.vim'
   " Plug 'pangloss/vim-javascript'
