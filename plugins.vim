@@ -38,4 +38,5 @@ call plug#begin('~/.vim/plugged')
   " Complements
   Plug 'jiangmiao/auto-pairs'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'voldikss/vim-floaterm'
 call plug#end()

@@ -14,6 +14,7 @@ source $HOME/.config/nvim/themes/nightfly.vim
 " Partials
 source $HOME/.config/nvim/partials/airline.vim
 source $HOME/.config/nvim/partials/fzf.vim
+source $HOME/.config/nvim/partials/floaterm.vim
 " source $HOME/.config/nvim/partials/nerdcommenter.vim
 " source $HOME/.config/nvim/partials/ale.vim
 " source $HOME/.config/nvim/partials/prettier.vim
