@@ -39,7 +39,7 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 " tnoremap <Esc> <C-\><C-n>
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
-nnoremap <leader>z <C-w>w
+nnoremap <C-\> <C-w>w
 
 " Resize
 nnoremap <silent> <leader><Up>    :resize -5<CR>
