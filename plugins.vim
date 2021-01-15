@@ -34,7 +34,8 @@ call plug#begin('~/.vim/plugged')
   " Plug 'leafgarland/typescript-vim'
   " Plug 'posva/vim-vue'
   " Complements
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'moll/vim-bbye'
   Plug 'voldikss/vim-floaterm'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()

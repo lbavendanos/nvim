@@ -25,8 +25,8 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <silent> <TAB> :bn<CR>
 nnoremap <silent> <S-TAB> :bp<CR>
 
-" Close buffer
-nnoremap <silent> <leader>w :bd<CR>
+" Close buffer using bbye plugin
+nnoremap <silent> <leader>w :Bdelete<CR>
 
 " Windows navigation
 nnoremap <C-h> <C-w>h
