@@ -22,4 +22,4 @@ source $HOME/.config/nvim/partials/coc/coc.vim
 source $HOME/.config/nvim/partials/coc/coc-extensions.vim
 source $HOME/.config/nvim/partials/coc/coc-explorer.vim
 source $HOME/.config/nvim/partials/coc/coc-prettier.vim
-luafile $HOME/.config/nvim/lua/treesitter.lua
+" luafile $HOME/.config/nvim/lua/treesitter.lua

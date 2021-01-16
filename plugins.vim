@@ -17,8 +17,6 @@ call plug#begin('~/.vim/plugged')
   " Git
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
-  " Commetary
-  Plug 'tomtom/tcomment_vim'
   " Intellisense
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Lint
@@ -28,14 +26,18 @@ call plug#begin('~/.vim/plugged')
   " Editorconfig
   Plug 'editorconfig/editorconfig-vim'
   " Syntax Highlighting
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  " Plug 'StanAngeloff/php.vim'
-  " Plug 'pangloss/vim-javascript'
-  " Plug 'leafgarland/typescript-vim'
-  " Plug 'posva/vim-vue'
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'sheerun/vim-polyglot'
+  Plug 'StanAngeloff/php.vim'
+  Plug 'jwalton512/vim-blade'
+  Plug 'pangloss/vim-javascript'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'posva/vim-vue'
   " Complements
+  Plug 'Yggdroot/indentLine'
   Plug 'moll/vim-bbye'
   Plug 'voldikss/vim-floaterm'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'tomtom/tcomment_vim'
   Plug 'jiangmiao/auto-pairs'
 call plug#end()
