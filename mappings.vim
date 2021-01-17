@@ -16,6 +16,7 @@ nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 " Basic
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>Q :q!<CR>
 
 " Move selected line
 vnoremap J :m '>+1<CR>gv=gv
