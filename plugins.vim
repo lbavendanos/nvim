@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
   " Plug 'drewtempelmeyer/palenight.vim'
   Plug 'bluz71/vim-nightfly-guicolors'
   " Plug 'bluz71/vim-moonfly-colors'
-  " Plug 'owickstrom/vim-colors-paramount'
   " Icons
   Plug 'ryanoasis/vim-devicons'
   " Statusline/Tabline
