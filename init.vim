@@ -8,13 +8,15 @@ source $HOME/.config/nvim/mappings.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
 " source $HOME/.config/nvim/themes/gruvbox8.vim
 " source $HOME/.config/nvim/themes/onedark.vim
+" source $HOME/.config/nvim/themes/one.vim
 " source $HOME/.config/nvim/themes/palenight.vim
 source $HOME/.config/nvim/themes/nightfly.vim
 " source $HOME/.config/nvim/themes/moonfly.vim
 " source $HOME/.config/nvim/themes/paramount.vim
 
 " Partials
-source $HOME/.config/nvim/partials/airline.vim
+" source $HOME/.config/nvim/partials/airline.vim
+source $HOME/.config/nvim/partials/lightline.vim
 source $HOME/.config/nvim/partials/fzf.vim
 " " source $HOME/.config/nvim/partials/ale.vim
 " " source $HOME/.config/nvim/partials/prettier.vim

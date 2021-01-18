@@ -4,16 +4,18 @@ call plug#begin('~/.vim/plugged')
   " Plug 'morhetz/gruvbox'
   " Plug 'lifepillar/vim-gruvbox8'
   " Plug 'joshdick/onedark.vim'
+  " Plug 'rakr/vim-one'
   " Plug 'drewtempelmeyer/palenight.vim'
   Plug 'bluz71/vim-nightfly-guicolors'
   " Plug 'bluz71/vim-moonfly-colors'
   " Plug 'owickstrom/vim-colors-paramount'
   " Icons
   Plug 'ryanoasis/vim-devicons'
-  " Status Bar
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  " Plug 'itchyny/lightline.vim'
+  " Statusline/Tabline
+  " Plug 'vim-airline/vim-airline'
+  " Plug 'vim-airline/vim-airline-themes'
+  Plug 'itchyny/lightline.vim'
+  Plug 'mengelbrecht/lightline-bufferline'
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
