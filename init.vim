@@ -14,13 +14,13 @@ source $HOME/.config/nvim/themes/nightfly.vim
 " source $HOME/.config/nvim/partials/airline.vim
 source $HOME/.config/nvim/partials/lightline.vim
 source $HOME/.config/nvim/partials/fzf.vim
-" " source $HOME/.config/nvim/partials/ale.vim
-" " source $HOME/.config/nvim/partials/prettier.vim
+" source $HOME/.config/nvim/partials/ale.vim
+" source $HOME/.config/nvim/partials/prettier.vim
 source $HOME/.config/nvim/partials/coc/coc.vim
 source $HOME/.config/nvim/partials/coc/coc-extensions.vim
 source $HOME/.config/nvim/partials/coc/coc-explorer.vim
 source $HOME/.config/nvim/partials/coc/coc-prettier.vim
-" luafile $HOME/.config/nvim/lua/treesitter.lua
+luafile $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/partials/indent-line.vim
 source $HOME/.config/nvim/partials/floaterm.vim
 source $HOME/.config/nvim/partials/visual-multi.vim
