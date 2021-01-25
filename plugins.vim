@@ -42,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'jwalton512/vim-blade'
   " Plug 'pangloss/vim-javascript'
   " Plug 'leafgarland/typescript-vim'
+  Plug 'maxmellon/vim-jsx-pretty'
   Plug 'posva/vim-vue'
 
   " Complements
