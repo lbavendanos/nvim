@@ -36,12 +36,12 @@ call plug#begin('~/.vim/plugged')
   " Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
   " Syntax Highlighting
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   " Plug 'sheerun/vim-polyglot'
   Plug 'StanAngeloff/php.vim'
   Plug 'jwalton512/vim-blade'
-  " Plug 'pangloss/vim-javascript'
-  " Plug 'leafgarland/typescript-vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'leafgarland/typescript-vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'posva/vim-vue'
 
