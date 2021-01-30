@@ -37,13 +37,13 @@ call plug#begin('~/.vim/plugged')
 
   " Syntax Highlighting
   " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  " Plug 'sheerun/vim-polyglot'
-  Plug 'StanAngeloff/php.vim'
-  Plug 'jwalton512/vim-blade'
-  Plug 'pangloss/vim-javascript'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'posva/vim-vue'
+  Plug 'sheerun/vim-polyglot'
+  " Plug 'StanAngeloff/php.vim'
+  " Plug 'jwalton512/vim-blade'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'leafgarland/typescript-vim'
+  " Plug 'maxmellon/vim-jsx-pretty'
+  " Plug 'posva/vim-vue'
 
   " Complements
   Plug 'moll/vim-bbye'
