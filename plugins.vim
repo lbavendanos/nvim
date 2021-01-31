@@ -54,4 +54,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomtom/tcomment_vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'honza/vim-snippets'
+  Plug 'szw/vim-maximizer'
 call plug#end()

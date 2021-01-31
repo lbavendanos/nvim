@@ -24,3 +24,4 @@ source $HOME/.config/nvim/partials/coc/coc-prettier.vim
 source $HOME/.config/nvim/partials/indent-line.vim
 source $HOME/.config/nvim/partials/floaterm.vim
 source $HOME/.config/nvim/partials/visual-multi.vim
+source $HOME/.config/nvim/partials/maximizer.vim
