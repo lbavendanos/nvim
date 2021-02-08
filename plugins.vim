@@ -55,5 +55,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'honza/vim-snippets'
   Plug 'szw/vim-maximizer'
-  Plug 'psliwka/vim-smoothie'
+  " Plug 'psliwka/vim-smoothie'
 call plug#end()
