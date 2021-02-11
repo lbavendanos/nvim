@@ -50,8 +50,8 @@ nnoremap <silent> <leader><Right> :vertical resize +5<CR>
 nnoremap <silent> <leader>= <C-w>=
 
 " Scroll
-map <S-Down> <C-E>
-map <S-Up> <C-Y>
+" map <S-Down> <C-E>
+" map <S-Up> <C-Y>
 
 " Indent
 vnoremap > >gv
