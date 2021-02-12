@@ -3,7 +3,7 @@ let g:lightline#bufferline#enable_nerdfont =1
 let g:lightline#bufferline#unnamed = '[No Name]'
 
 let g:lightline = {
-  \ 'colorscheme': 'nightfly',
+  \ 'colorscheme': 'iceberg',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
   \ },

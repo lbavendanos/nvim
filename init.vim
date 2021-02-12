@@ -7,8 +7,10 @@ source $HOME/.config/nvim/mappings.vim
 " source $HOME/.config/nvim/themes/material.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
 " source $HOME/.config/nvim/themes/gruvbox8.vim
-source $HOME/.config/nvim/themes/nightfly.vim
+" source $HOME/.config/nvim/themes/nightfly.vim
 " source $HOME/.config/nvim/themes/moonfly.vim
+" source $HOME/.config/nvim/themes/nord.vim
+source $HOME/.config/nvim/themes/iceberg.vim
 
 " Partials
 " source $HOME/.config/nvim/partials/airline.vim

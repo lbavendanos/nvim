@@ -6,9 +6,11 @@ call plug#begin('~/.vim/plugged')
   " Plug 'joshdick/onedark.vim'
   " Plug 'rakr/vim-one'
   " Plug 'drewtempelmeyer/palenight.vim'
-  Plug 'bluz71/vim-nightfly-guicolors'
+  " Plug 'bluz71/vim-nightfly-guicolors'
   " Plug 'bluz71/vim-moonfly-colors'
   " Plug 'noahfrederick/vim-noctu'
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'cocopon/iceberg.vim'
 
   " Icons
   Plug 'ryanoasis/vim-devicons'
