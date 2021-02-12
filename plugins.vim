@@ -56,5 +56,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-surround'
-  " Plug 'psliwka/vim-smoothie'
+  Plug 'psliwka/vim-smoothie'
 call plug#end()
