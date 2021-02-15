@@ -5,5 +5,7 @@
   "explorer.file.showHiddenFiles": true,
   // TailwindCss
   "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.headwind.runOnSave": false
+  "tailwindCSS.headwind.runOnSave": false,
+  // Flutter
+  "flutter.provider.hot-reload": false
 }

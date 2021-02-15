@@ -2,6 +2,7 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-vimlsp',
   \ 'coc-lua',
+  \ 'coc-flutter',
   \ 'coc-phpls',
   \ 'coc-json',
   \ 'coc-tsserver',
