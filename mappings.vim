@@ -7,7 +7,7 @@ nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 nnoremap <Space> <Nop>
-nnoremap <CR> <Nop>
+" nnoremap <CR> <Nop>
 nnoremap <backspace> <Nop>
 
 " Reload init.vim
@@ -56,3 +56,6 @@ nnoremap <silent> <leader>= <C-w>=
 " Indent
 vnoremap > >gv
 vnoremap < <gv
+
+" Clear highlight
+nnoremap <Esc><Esc> :noh<return><Esc>
