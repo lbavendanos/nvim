@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'bluz71/vim-nightfly-guicolors'
   " Plug 'bluz71/vim-moonfly-colors'
   " Plug 'noahfrederick/vim-noctu'
-  Plug 'arcticicestudio/nord-vim'
+  " Plug 'arcticicestudio/nord-vim'
   Plug 'cocopon/iceberg.vim'
 
   " Icons
@@ -50,7 +50,7 @@ call plug#begin('~/.vim/plugged')
 
   " Complements
   Plug 'moll/vim-bbye'
-  Plug 'voldikss/vim-floaterm'
+  " Plug 'voldikss/vim-floaterm'
   Plug 'Yggdroot/indentLine'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
