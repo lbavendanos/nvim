@@ -49,14 +49,9 @@ nnoremap <silent> <leader><Left>  :vertical resize -5<CR>
 nnoremap <silent> <leader><Right> :vertical resize +5<CR>
 nnoremap <silent> <leader>= <C-w>=
 
-" Scroll
-" map <S-Down> <C-E>
-" map <S-Up> <C-Y>
-
 " Indent
 vnoremap > >gv
 vnoremap < <gv
 
 " Clear highlight
-" nnoremap <Esc><Esc> :noh<return><Esc>
 nnoremap <leader>/ :noh<CR>
