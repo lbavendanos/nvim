@@ -1,5 +1,5 @@
-let g:lightline#bufferline#enable_devicons =1
-let g:lightline#bufferline#enable_nerdfont =1
+let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#enable_nerdfont = 1
 let g:lightline#bufferline#unnamed = '[No Name]'
 
 let g:lightline = {

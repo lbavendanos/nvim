@@ -3,9 +3,9 @@ call plug#begin('~/.vim/plugged')
   " Plug 'kaicataldo/material.vim', { 'branch': 'main' }
   " Plug 'morhetz/gruvbox'
   " Plug 'lifepillar/vim-gruvbox8'
-  " Plug 'joshdick/onedark.vim'
+  Plug 'joshdick/onedark.vim'
   " Plug 'rakr/vim-one'
-  " Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'drewtempelmeyer/palenight.vim'
   " Plug 'bluz71/vim-nightfly-guicolors'
   " Plug 'bluz71/vim-moonfly-colors'
   " Plug 'noahfrederick/vim-noctu'
@@ -14,16 +14,23 @@ call plug#begin('~/.vim/plugged')
 
   " Icons
   Plug 'ryanoasis/vim-devicons'
+  Plug 'kyazdani42/nvim-web-devicons'
+
   " Statusline/Tabline
   " Plug 'vim-airline/vim-airline'
   " Plug 'vim-airline/vim-airline-themes'
   Plug 'itchyny/lightline.vim'
   Plug 'mengelbrecht/lightline-bufferline'
 
-  " FZF
+  " Lua
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-lua/popup.nvim'
+
+  " Fuzzy Finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
+  Plug 'nvim-telescope/telescope.nvim'
 
   " Git
   Plug 'tpope/vim-fugitive'

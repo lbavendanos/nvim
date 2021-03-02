@@ -58,4 +58,5 @@ vnoremap > >gv
 vnoremap < <gv
 
 " Clear highlight
-nnoremap <Esc><Esc> :noh<return><Esc>
+" nnoremap <Esc><Esc> :noh<return><Esc>
+nnoremap <leader>/ :noh<CR>
