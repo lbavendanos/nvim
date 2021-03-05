@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-  " Theme
+  " Themes
   " Plug 'kaicataldo/material.vim', { 'branch': 'main' }
   " Plug 'joshdick/onedark.vim'
   Plug 'drewtempelmeyer/palenight.vim'
