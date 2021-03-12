@@ -16,6 +16,7 @@ source $HOME/.config/nvim/themes/palenight.vim
 " Partials
 source $HOME/.config/nvim/partials/lightline.vim
 source $HOME/.config/nvim/partials/fzf.vim
+" source $HOME/.config/nvim/partials/nvimtree-config.vim
 source $HOME/.config/nvim/partials/telescope.vim
 source $HOME/.config/nvim/partials/coc/coc.vim
 source $HOME/.config/nvim/partials/coc/coc-extensions.vim
@@ -25,4 +26,6 @@ source $HOME/.config/nvim/partials/visual-multi.vim
 source $HOME/.config/nvim/partials/maximizer.vim
 
 " Lua
-" luafile $HOME/.config/nvim/lua/treesitter.lua
+" luafile $HOME/.config/nvim/lua/partials/treesitter-config.lua
+luafile $HOME/.config/nvim/lua/partials/telescope-config.lua
+" luafile $HOME/.config/nvim/lua/partials/nvimtree-config.lua
