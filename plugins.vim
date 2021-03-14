@@ -28,7 +28,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-telescope/telescope.nvim'
 
   " File Explorer
-  " Plug 'kyazdani42/nvim-tree.lua'
+  Plug 'kyazdani42/nvim-tree.lua'
 
   " Git
   Plug 'tpope/vim-fugitive'

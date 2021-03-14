@@ -1,12 +1,14 @@
 let g:nvim_tree_width = 40
-let g:nvim_tree_ignore = ['.git']
 let g:nvim_tree_follow = 1
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_git_hl = 1
 let g:nvim_tree_disable_netrw = 0
 let g:nvim_tree_hijack_netrw = 0
-
-nnoremap <leader>e :NvimTreeToggle<CR>
+let g:nvim_tree_show_icons = {
+    \ 'git': 0,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ } 
 
 " Hide Cursor and active Cursorline
 augroup Cursor
@@ -17,3 +19,5 @@ augroup Cursor
   au WinEnter,FileType NvimTree setlocal cursorline
 augroup END
 au FileType NvimTree hi Cursor blend=100
+
+nnoremap <leader>e :NvimTreeToggle<CR>
