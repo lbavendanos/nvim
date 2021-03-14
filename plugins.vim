@@ -24,7 +24,6 @@ call plug#begin('~/.vim/plugged')
   " Fuzzy Finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
   Plug 'nvim-telescope/telescope.nvim'
 
   " File Explorer
