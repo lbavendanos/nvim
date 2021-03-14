@@ -5,12 +5,7 @@ source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/mappings.vim
 
 " Themes
-" source $HOME/.config/nvim/themes/material.vim
-" source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/themes/palenight.vim
-" source $HOME/.config/nvim/themes/nightfly.vim
-" source $HOME/.config/nvim/themes/moonfly.vim
-" source $HOME/.config/nvim/themes/nord.vim
 " source $HOME/.config/nvim/themes/iceberg.vim
 
 " Partials

@@ -1,11 +1,10 @@
 call plug#begin('~/.vim/plugged')
+  " Lua
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-lua/popup.nvim'
+
   " Themes
-  " Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-  " Plug 'joshdick/onedark.vim'
   Plug 'drewtempelmeyer/palenight.vim'
-  " Plug 'bluz71/vim-nightfly-guicolors'
-  " Plug 'bluz71/vim-moonfly-colors'
-  " Plug 'arcticicestudio/nord-vim'
   Plug 'cocopon/iceberg.vim'
   " Plug 'noahfrederick/vim-noctu'
 
@@ -13,20 +12,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'ryanoasis/vim-devicons'
   Plug 'kyazdani42/nvim-web-devicons'
 
-  " Statusline/Tabline
+  " Statusline and Tabline
   Plug 'itchyny/lightline.vim'
   Plug 'mengelbrecht/lightline-bufferline'
 
-  " Lua
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-lua/popup.nvim'
-
-  " Fuzzy Finder
+  " Finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'nvim-telescope/telescope.nvim'
 
-  " File Explorer
+  " Explorer
   Plug 'kyazdani42/nvim-tree.lua'
 
   " Git
@@ -37,10 +32,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Syntax Highlighting
-  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'sheerun/vim-polyglot'
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-  " Complements
+  " General
   Plug 'moll/vim-bbye'
   Plug 'Yggdroot/indentLine'
   Plug 'editorconfig/editorconfig-vim'
