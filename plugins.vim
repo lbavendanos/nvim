@@ -51,4 +51,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-surround'
   Plug 'psliwka/vim-smoothie'
+  Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()

@@ -26,5 +26,6 @@ source $HOME/.config/nvim/partials/maximizer.vim
 
 " Lua
 " luafile $HOME/.config/nvim/lua/partials/treesitter-config.lua
+luafile $HOME/.config/nvim/lua/partials/colorizer-config.lua
 luafile $HOME/.config/nvim/lua/partials/telescope-config.lua
 luafile $HOME/.config/nvim/lua/partials/nvimtree-config.lua
