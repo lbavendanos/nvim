@@ -1,5 +1,5 @@
 " General Settings
-source $HOME/.config/nvim/partials/polyglot.vim
+" source $HOME/.config/nvim/partials/polyglot.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/mappings.vim
@@ -9,7 +9,7 @@ source $HOME/.config/nvim/themes/palenight.vim
 " source $HOME/.config/nvim/themes/iceberg.vim
 
 " Partials
-source $HOME/.config/nvim/partials/lightline.vim
+" source $HOME/.config/nvim/partials/lightline.vim
 source $HOME/.config/nvim/partials/fzf.vim
 source $HOME/.config/nvim/partials/coc/coc.vim
 source $HOME/.config/nvim/partials/coc/coc-extensions.vim
@@ -17,7 +17,11 @@ source $HOME/.config/nvim/partials/indent-line.vim
 source $HOME/.config/nvim/partials/maximizer.vim
 
 " Lua
-" luafile $HOME/.config/nvim/lua/plugins/treesitter/init.lua
+luafile $HOME/.config/nvim/lua/plugins/treesitter/init.lua
 luafile $HOME/.config/nvim/lua/plugins/colorizer/init.lua
 luafile $HOME/.config/nvim/lua/plugins/telescope/init.lua
-luafile $HOME/.config/nvim/lua/plugins/nvimtree/init.lua
+luafile $HOME/.config/nvim/lua/plugins/tree/init.lua
+" luafile $HOME/.config/nvim/lua/plugins/comment/init.lua
+luafile $HOME/.config/nvim/lua/plugins/bufferline/init.lua
+luafile $HOME/.config/nvim/lua/plugins/galaxyline/init.lua
+" luafile $HOME/.config/nvim/lua/plugins/lspkind/init.lua

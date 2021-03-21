@@ -1,12 +1,14 @@
+local api = vim.api
+
 builtin = require('telescope.builtin')
 findFilesOptions = {
   find_command={'rg','--ignore','--hidden','--files'}
 }
 
-vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>lua builtin.find_files(findFilesOptions)<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>P', '<cmd>lua builtin.file_browser()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>lua builtin.live_grep()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>lua builtin.buffer()<CR>', { noremap = true })
+api.nvim_set_keymap('n', '<leader>p', '<cmd>lua builtin.find_files(findFilesOptions)<CR>', { noremap = true })
+api.nvim_set_keymap('n', '<leader>P', '<cmd>lua builtin.file_browser()<CR>', { noremap = true })
+api.nvim_set_keymap('n', '<leader>o', '<cmd>lua builtin.live_grep()<CR>', { noremap = true })
+api.nvim_set_keymap('n', '<leader>b', '<cmd>lua builtin.buffer()<CR>', { noremap = true })
 
 require('telescope').setup {
   defaults = {

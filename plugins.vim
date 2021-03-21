@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
   " Lua
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/popup.nvim'
+  " Plug 'onsails/lspkind-nvim'
 
   " Themes
   Plug 'drewtempelmeyer/palenight.vim'
@@ -13,8 +14,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
 
   " Statusline and Tabline
-  Plug 'itchyny/lightline.vim'
-  Plug 'mengelbrecht/lightline-bufferline'
+  Plug 'akinsho/nvim-bufferline.lua'
+  Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+  " Plug 'itchyny/lightline.vim'
+  " Plug 'mengelbrecht/lightline-bufferline'
 
   " Finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -32,8 +35,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Syntax Highlighting
-  Plug 'sheerun/vim-polyglot'
-  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'sheerun/vim-polyglot'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " General
   Plug 'moll/vim-bbye'
@@ -41,6 +44,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'editorconfig/editorconfig-vim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'tomtom/tcomment_vim'
+  " Plug 'terrortylor/nvim-comment'
+  " Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
   Plug 'honza/vim-snippets'
   Plug 'szw/vim-maximizer'
