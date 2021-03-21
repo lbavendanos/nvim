@@ -15,8 +15,6 @@ call plug#begin('~/.vim/plugged')
   " Statusline and Tabline
   Plug 'romgrk/barbar.nvim'
   Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-  " Plug 'itchyny/lightline.vim'
-  " Plug 'mengelbrecht/lightline-bufferline'
 
   " Finder
   Plug 'nvim-telescope/telescope.nvim'

@@ -9,7 +9,6 @@ source $HOME/.config/nvim/themes/palenight.vim
 " source $HOME/.config/nvim/themes/iceberg.vim
 
 " Partials
-" source $HOME/.config/nvim/partials/lightline.vim
 source $HOME/.config/nvim/partials/coc/coc.vim
 source $HOME/.config/nvim/partials/coc/coc-extensions.vim
 source $HOME/.config/nvim/partials/indent-line.vim
