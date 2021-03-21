@@ -21,7 +21,5 @@ luafile $HOME/.config/nvim/lua/plugins/treesitter/init.lua
 luafile $HOME/.config/nvim/lua/plugins/colorizer/init.lua
 luafile $HOME/.config/nvim/lua/plugins/telescope/init.lua
 luafile $HOME/.config/nvim/lua/plugins/tree/init.lua
-" luafile $HOME/.config/nvim/lua/plugins/comment/init.lua
-luafile $HOME/.config/nvim/lua/plugins/bufferline/init.lua
+luafile $HOME/.config/nvim/lua/plugins/barbar/init.lua
 luafile $HOME/.config/nvim/lua/plugins/galaxyline/init.lua
-" luafile $HOME/.config/nvim/lua/plugins/lspkind/init.lua

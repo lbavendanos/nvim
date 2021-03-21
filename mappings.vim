@@ -7,7 +7,6 @@ nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 nnoremap <Space> <Nop>
-" nnoremap <CR> <Nop>
 nnoremap <backspace> <Nop>
 
 " Reload init.vim
@@ -21,13 +20,6 @@ nnoremap <leader>Q :q!<CR>
 " Move selected line
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-" Buffer navigation
-nnoremap <silent> <TAB> :bn<CR>
-nnoremap <silent> <S-TAB> :bp<CR>
-
-" Close buffer using bbye plugin
-nnoremap <silent> <leader>w :Bdelete<CR>
 
 " Windows navigation
 nnoremap <C-h> <C-w>h
