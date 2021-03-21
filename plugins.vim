@@ -19,8 +19,6 @@ call plug#begin('~/.vim/plugged')
   " Plug 'mengelbrecht/lightline-bufferline'
 
   " Finder
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
   Plug 'nvim-telescope/telescope.nvim'
 
   " Explorer
