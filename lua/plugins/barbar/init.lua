@@ -2,7 +2,7 @@ local api = vim.api
 local g = vim.g
 local keymapOptions = { noremap = true, silent = true }
 
-g.bufferline = {
+g.bufferline = g.bufferline or {
   animation = false
 }
 
