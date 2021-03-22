@@ -13,8 +13,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
 
   " Statusline and Tabline
-  Plug 'romgrk/barbar.nvim'
   Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+  Plug 'romgrk/barbar.nvim'
 
   " Finder
   Plug 'nvim-telescope/telescope.nvim'

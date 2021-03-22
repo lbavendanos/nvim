@@ -53,9 +53,10 @@ gl.short_line_list = {
 gls.left = {
   {
     StartIcon = {
-      provider = function() return '    ' end,
+      provider = function() return '   ' end,
       highlight = { colors.black, colors.green },
-      separator = ' '
+      separator = ' ',
+      separator_highlight = { colors.black, colors.green }
     }
   },
   {
@@ -64,10 +65,9 @@ gls.left = {
         local byte = fn.mode():byte()
         local mode = modes[byte]
 
-        return '    ' .. mode .. '    '
+        return '  ' .. mode .. '  '
       end,
       highlight = { colors.bg, colors.blue, 'bold' },
-      separator = ' ',
     }
   },
   {
@@ -78,7 +78,7 @@ gls.left = {
 
         filename = string.gsub(filename, '^%s*(.-)%s*$', '%1')
 
-        return ' ' .. filename
+        return '  ' .. filename
       end,
       highlight = { colors.black, colors.cyan },
       separator = ' ',
@@ -128,7 +128,7 @@ gls.right = {
     }
   },
   {
-    LinInfo = {
+    LineInfo = {
       provider = function()
         local linePercent = fileinfo.current_line_percent()
         local lineColumn = fileinfo.line_column()
@@ -142,7 +142,7 @@ gls.right = {
 
 gls.short_line_left = {
   {
-    BufferIcon = {
+    ShortBufferIcon = {
       provider = function ()
         local icon = (buffer.get_buffer_type_icon() or '')
 
@@ -152,9 +152,34 @@ gls.short_line_left = {
     }
   },
   {
-    BufferName = {
+    ShortBufferName = {
       provider = fileinfo.get_current_file_name,
       highlight = { colors.fg, colors.gray },
     }
   },
+}
+
+gls.short_line_right = {
+  {
+    ShortFileInfo = {
+      provider = function()
+        local fileEncode = fileinfo.get_file_encode()
+        local fileFormat = fileinfo.get_file_format()
+
+        return ' ' .. fileEncode:lower() .. ' ' .. fileFormat:lower() .. ' '
+      end,
+      highlight = { colors.fg, colors.gray },
+    }
+  },
+  {
+    ShortLineInfo = {
+      provider = function()
+        local linePercent = fileinfo.current_line_percent()
+        local lineColumn = fileinfo.line_column()
+
+        return ' ' .. linePercent .. ' ' .. lineColumn .. ' '
+      end,
+      highlight = { colors.fg, colors.gray },
+    }
+  }
 }
