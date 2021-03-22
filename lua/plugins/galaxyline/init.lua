@@ -105,9 +105,10 @@ gls.right = {
     FileTypeName = {
       provider = function()
         local fileType = buffer.get_buffer_filetype()
-        local name = (fileType == '' and 'unknown' or fileType)
 
-        return name:lower() .. ' '
+        fileType = (fileType == '' and 'unknown' or fileType)
+
+        return fileType:lower() .. ' '
       end,
       condition = condition.buffer_not_empty,
       highlight = { colors.black, colors.orange },
