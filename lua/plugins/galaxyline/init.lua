@@ -1,13 +1,12 @@
 local vim = vim
 local fn = vim.fn
-local api = vim.api
 
 local gl = require('galaxyline')
-local gls = gl.section
 local condition = require('galaxyline.condition')
 local fileinfo = require('galaxyline.provider_fileinfo')
 local buffer = require('galaxyline.provider_buffer')
 local vcs = require('galaxyline.provider_vcs')
+local gls = gl.section
 
 local colors = {
   bg        = '#000000',
@@ -53,15 +52,10 @@ gl.short_line_list = {
 
 gls.left = {
   {
-    StartSpace = {
-      provider = function () return ' ' end,
-      highlight = { colors.black, colors.green }
-    }
-  },
-  {
-    Logo = {
-      provider = function() return '  ' end,
+    StartIcon = {
+      provider = function() return '    ' end,
       highlight = { colors.black, colors.green },
+      separator = ' '
     }
   },
   {
@@ -70,7 +64,7 @@ gls.left = {
         local byte = fn.mode():byte()
         local mode = modes[byte]
 
-        return '     ' .. mode .. '    '
+        return '    ' .. mode .. '    '
       end,
       highlight = { colors.bg, colors.blue, 'bold' },
       separator = ' ',
@@ -80,11 +74,15 @@ gls.left = {
     FileName = {
       provider = function ()
         local current = fileinfo.get_current_file_name()
-        local filename = (current == '' and '[No Name] ' or current)
+        local filename = (current == '' and '[No Name]' or current)
+
+        filename = string.gsub(filename, '^%s*(.-)%s*$', '%1')
 
         return ' ' .. filename
       end,
-      highlight = { colors.black, colors.pink },
+      highlight = { colors.black, colors.cyan },
+      separator = ' ',
+      separator_highlight = { colors.black, colors.cyan }
     }
   },
   {
@@ -92,18 +90,14 @@ gls.left = {
       provider = function ()
         local branch = vcs.get_git_branch():gsub('%s+', '')
 
-        return '  ' .. branch .. ' '
+        return ' ' .. branch .. ' '
       end,
       condition = condition.check_git_workspace,
-      highlight = { colors.black, colors.purple },
+      highlight = { colors.black, colors.pink },
+      separator = ' ',
+      separator_highlight = { colors.black, colors.gray }
     }
   },
-  {
-    EndSpace = {
-      provider = function () return ' ' end,
-      highlight = { colors.black, colors.gray }
-    }
-  }
 }
 
 gls.right = {
