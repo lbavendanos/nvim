@@ -1,3 +1,4 @@
+local vim  = vim
 local api = vim.api
 local g = vim.g
 local keymapOptions = { noremap = true, silent = true }

@@ -1,4 +1,6 @@
+require('plugins.galaxyline')
+require('plugins.barbar')
+require('plugins.telescope')
+require('plugins.tree')
 require('plugins.treesitter')
 require('plugins.colorizer')
-require('plugins.telescope')
-require('plugins.nvimtree')
