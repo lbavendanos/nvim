@@ -94,10 +94,14 @@ gls.left = {
       end,
       condition = condition.check_git_workspace,
       highlight = { colors.black, colors.pink },
-      separator = ' ',
-      separator_highlight = { colors.black, colors.gray }
     }
   },
+  {
+    LastSpace = {
+      provider = function () return '' end,
+      highlight= { colors.black, colors.gray }
+    }
+  }
 }
 
 gls.right = {

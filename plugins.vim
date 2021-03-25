@@ -26,8 +26,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
 
+  " LSP
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'onsails/lspkind-nvim'
+  Plug 'hrsh7th/vim-vsnip'
+
   " Intellisense
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Syntax Highlighting
   " Plug 'sheerun/vim-polyglot'

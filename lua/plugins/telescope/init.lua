@@ -1,16 +1,9 @@
-local  vim = vim
-local api = vim.api
-local keymapOptions = { noremap = true }
+local opts = { noremap = true }
 
-builtin = require('telescope.builtin')
-findFilesOptions = {
-  find_command={'rg','--ignore','--hidden','--files'}
-}
-
-api.nvim_set_keymap('n', '<leader>p', '<cmd>lua builtin.find_files(findFilesOptions)<CR>', keymapOptions)
-api.nvim_set_keymap('n', '<leader>P', '<cmd>lua builtin.file_browser()<CR>', keymapOptions)
-api.nvim_set_keymap('n', '<leader>o', '<cmd>lua builtin.live_grep()<CR>', keymapOptions)
-api.nvim_set_keymap('n', '<leader>b', '<cmd>lua builtin.buffer()<CR>', keymapOptions)
+vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>lua require("telescope.builtin").find_files({find_command={"rg","--ignore","--hidden","--files"}})<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>P', '<cmd>lua require("telescope.builtin").file_browser()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>lua require("telescope.builtin").buffers()<CR>', opts)
 
 require('telescope').setup {
   defaults = {
