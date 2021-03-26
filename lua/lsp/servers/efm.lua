@@ -5,7 +5,6 @@ local prettier = require('lsp.formatters.prettier')
 local luafmt = require('lsp.formatters.luafmt')
 
 local languages = {
-  vim = { vint },
   lua = { luafmt },
   typescript = { eslint, prettier },
   javascript = { eslint, prettier },
