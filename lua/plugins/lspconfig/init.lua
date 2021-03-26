@@ -17,31 +17,53 @@ function config.on_attach(client, bufnr)
   -- buf_set_keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   -- buf_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   -- buf_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  buf_set_keymap('n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  buf_set_keymap('n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>',
+                 opts)
   -- buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   buf_set_keymap('n', 'gR', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   -- buf_set_keymap('n', '<leader>i', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<leader>d', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  buf_set_keymap('n', '<leader>d',
+                 '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
   -- Saga keybinds
-  buf_set_keymap('n', 'gp', '<cmd>lua require"lspsaga.provider".preview_definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua require("lspsaga.signaturehelp").signature_help()<CR>', opts)
-  buf_set_keymap('n', '<leader>rn', '<cmd>lua require("lspsaga.rename").rename()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua require"lspsaga.provider".lsp_finder()<CR>', opts)
-  buf_set_keymap('n', '<leader>i', '<cmd>lua require"lspsaga.diagnostic".show_line_diagnostics()<CR>', opts)
-  buf_set_keymap('n', '<leader>ca', '<cmd>lua require("lspsaga.codeaction").code_action()<CR>', opts)
-  buf_set_keymap('v', '<leader>ca', ':<C-U>lua require("lspsaga.codeaction").range_code_action()', opts)
-  buf_set_keymap('n', '<C-f>', '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>', opts)
-  buf_set_keymap('n', '<C-b>', '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>', opts)
+  buf_set_keymap('n', 'gp',
+                 '<cmd>lua require"lspsaga.provider".preview_definition()<CR>',
+                 opts)
+  buf_set_keymap('n', 'K',
+                 '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>',
+                 opts)
+  buf_set_keymap('n', '<leader>k',
+                 '<cmd>lua require("lspsaga.signaturehelp").signature_help()<CR>',
+                 opts)
+  buf_set_keymap('n', '<leader>rn',
+                 '<cmd>lua require("lspsaga.rename").rename()<CR>', opts)
+  buf_set_keymap('n', 'gr',
+                 '<cmd>lua require"lspsaga.provider".lsp_finder()<CR>', opts)
+  buf_set_keymap('n', '<leader>i',
+                 '<cmd>lua require"lspsaga.diagnostic".show_line_diagnostics()<CR>',
+                 opts)
+  buf_set_keymap('n', '<leader>ca',
+                 '<cmd>lua require("lspsaga.codeaction").code_action()<CR>',
+                 opts)
+  buf_set_keymap('v', '<leader>ca',
+                 ':<C-U>lua require("lspsaga.codeaction").range_code_action()',
+                 opts)
+  buf_set_keymap('n', '<C-f>',
+                 '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>',
+                 opts)
+  buf_set_keymap('n', '<C-b>',
+                 '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>',
+                 opts)
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
-    buf_set_keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+    buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>',
+                   opts)
   elseif client.resolved_capabilities.document_range_formatting then
-    buf_set_keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
+    buf_set_keymap('n', '<leader>f',
+                   '<cmd>lua vim.lsp.buf.range_formatting()<CR>', opts)
   end
 
   -- Set autocommands conditional on server_capabilities

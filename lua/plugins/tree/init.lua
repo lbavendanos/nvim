@@ -26,4 +26,5 @@ augroup END
 au FileType NvimTree hi Cursor blend=100
 ]], false)
 
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>',
+                        { noremap = true })

@@ -1,8 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-vim.g.bufferline = vim.g.bufferline or {
-  animation = false
-}
+vim.g.bufferline = vim.g.bufferline or { animation = false }
 
 vim.api.nvim_set_keymap('n', '<leader>w', ':BufferClose<CR>', opts)
 

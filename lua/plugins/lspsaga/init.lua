@@ -7,12 +7,6 @@ require('lspsaga').init_lsp_saga {
     scroll_down = '<C-f>',
     scroll_up = '<C-b>'
   },
-  code_action_keys = {
-    quit = '<Escape>',
-    exec = '<CR>'
-  },
-  rename_action_keys = {
-    quit = '<Escape>',
-    exec = '<CR>'
-  },
+  code_action_keys = { quit = '<Escape>', exec = '<CR>' },
+  rename_action_keys = { quit = '<Escape>', exec = '<CR>' }
 }
