@@ -24,10 +24,11 @@ call plug#begin('~/.vim/plugged')
 
   " Git
   Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
+  Plug 'lewis6991/gitsigns.nvim'
 
   " LSP
   Plug 'neovim/nvim-lspconfig'
+  Plug 'glepnir/lspsaga.nvim'
   Plug 'hrsh7th/nvim-compe'
   Plug 'onsails/lspkind-nvim'
   Plug 'hrsh7th/vim-vsnip'
