@@ -11,7 +11,6 @@ luafile $HOME/.config/nvim/lua/themes/moonfly/init.lua
 " Partials
 " source $HOME/.config/nvim/partials/coc/coc.vim
 " source $HOME/.config/nvim/partials/coc/coc-extensions.vim
-source $HOME/.config/nvim/partials/maximizer.vim
 
 " Lua
 luafile $HOME/.config/nvim/lua/plugins/galaxyline/init.lua
@@ -25,4 +24,5 @@ luafile $HOME/.config/nvim/lua/plugins/lspsaga/init.lua
 luafile $HOME/.config/nvim/lua/plugins/compe/init.lua
 luafile $HOME/.config/nvim/lua/plugins/lspkind/init.lua
 luafile $HOME/.config/nvim/lua/plugins/gitsigns/init.lua
+luafile $HOME/.config/nvim/lua/plugins/maximizer/init.lua
 luafile $HOME/.config/nvim/lua/lsp/init.lua
