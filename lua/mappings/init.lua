@@ -3,7 +3,7 @@ local opts = { noremap = true }
 -- Leader key
 vim.g.mapleader = ' '
 
---" Disable keys
+-- Disable keys
 vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', opts)
 vim.api.nvim_set_keymap('n', '<Down>', '<Nop>', opts)
 vim.api.nvim_set_keymap('n', '<Left>', '<Nop>', opts)
@@ -12,7 +12,7 @@ vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', opts)
 vim.api.nvim_set_keymap('n', '<backspace>', '<Nop>', opts)
 
 -- Reload init.vim
-vim.api.nvim_set_keymap('n', '<leader><CR>', ':so ~/.config/nvim/init.vim', opts)
+-- vim.api.nvim_set_keymap('n', '<leader><CR>', ':so ~/.config/nvim/init.vim', opts)
 
 -- Basic
 vim.api.nvim_set_keymap('n', '<leader>s', ':w<CR>', opts)
@@ -45,5 +45,5 @@ vim.api.nvim_set_keymap('n', '<leader>=', '<C-w>=', opts)
 vim.api.nvim_set_keymap('v', '>', '>gv', opts)
 vim.api.nvim_set_keymap('v', '<', '<gv', opts)
 
--- Clear highlight 
+-- Clear highlight
 vim.api.nvim_set_keymap('n', '<leader>/', ':noh<CR>', opts)
