@@ -36,7 +36,6 @@ call plug#begin('~/.vim/plugged')
   " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Syntax Highlighting
-  " Plug 'sheerun/vim-polyglot'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
 
