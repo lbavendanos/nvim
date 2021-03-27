@@ -1,5 +1,5 @@
 local lspconfig = require('lspconfig')
-local on_attach = require('plugins.lspconfig').on_attach
+local on_attach = require('partials.lspconfig').on_attach
 local eslint = require('lsp.linters.eslint')
 local prettier = require('lsp.formatters.prettier')
 local luafmt = require('lsp.formatters.luafmt')

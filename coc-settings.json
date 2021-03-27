@@ -1,8 +1,0 @@
-{
-  // TailwindCss
-  "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.headwind.runOnSave": false,
-  // Flutter
-  "flutter.provider.hot-reload": false,
-  "flutter.lsp.initialization.closingLabels": false
-}
