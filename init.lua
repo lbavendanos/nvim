@@ -9,3 +9,6 @@ require('themes.moonfly')
 
 -- Partials
 require('partials')
+
+-- LSP
+require('lsp')
