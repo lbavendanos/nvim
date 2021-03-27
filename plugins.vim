@@ -4,9 +4,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-lua/popup.nvim'
 
   " Themes
-  Plug 'drewtempelmeyer/palenight.vim'
-  Plug 'cocopon/iceberg.vim'
-  " Plug 'noahfrederick/vim-noctu'
+  Plug 'bluz71/vim-nightfly-guicolors'
+  Plug 'bluz71/vim-moonfly-colors'
 
   " Icons
   Plug 'ryanoasis/vim-devicons'
@@ -39,6 +38,7 @@ call plug#begin('~/.vim/plugged')
   " Syntax Highlighting
   " Plug 'sheerun/vim-polyglot'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'nvim-treesitter/playground'
 
   " General
   Plug 'Yggdroot/indentLine'
