@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
   use 'editorconfig/editorconfig-vim'
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'tomtom/tcomment_vim'
-  use 'jiangmiao/auto-pairs'
+  use 'cohama/lexima.vim'
   use 'honza/vim-snippets'
   use 'szw/vim-maximizer'
   use 'tpope/vim-surround'
