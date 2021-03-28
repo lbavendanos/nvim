@@ -11,9 +11,6 @@ vim.api.nvim_set_keymap('n', '<Right>', '<Nop>', opts)
 vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', opts)
 vim.api.nvim_set_keymap('n', '<backspace>', '<Nop>', opts)
 
--- Reload init.vim
--- vim.api.nvim_set_keymap('n', '<leader><CR>', ':so ~/.config/nvim/init.vim', opts)
-
 -- Basic
 vim.api.nvim_set_keymap('n', '<leader>s', ':w<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', opts)

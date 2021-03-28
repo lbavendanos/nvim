@@ -15,11 +15,33 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
+  use 'onsails/lspkind-nvim'
+
+  -- Completion
+  use 'hrsh7th/nvim-compe'
+
+  -- Syntax
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'nvim-treesitter/playground'
+
+  -- Snippets
+  use 'hrsh7th/vim-vsnip'
+  use 'honza/vim-snippets'
+
   -- Lua
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
 
-  -- Themes
+  -- Fuzzy Finder
+  use 'nvim-telescope/telescope.nvim'
+
+  -- Colors
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- Colorscheme
   use 'bluz71/vim-nightfly-guicolors'
   use 'bluz71/vim-moonfly-colors'
 
@@ -27,40 +49,37 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
   use 'kyazdani42/nvim-web-devicons'
 
-  -- Statusline and Tabline
-  use { 'glepnir/galaxyline.nvim', branch = 'main' }
+  -- Tabline
   use 'romgrk/barbar.nvim'
 
-  -- Finder
-  use 'nvim-telescope/telescope.nvim'
+  -- Statusline
+  use { 'glepnir/galaxyline.nvim', branch = 'main' }
 
-  -- Explorer
+  -- Indent
+  use 'Yggdroot/indentLine'
+
+  -- File explorer
   use 'kyazdani42/nvim-tree.lua'
 
   -- Git
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
-  use 'hrsh7th/nvim-compe'
-  use 'onsails/lspkind-nvim'
-  use 'hrsh7th/vim-vsnip'
+  -- Comment
+  use 'terrortylor/nvim-comment'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
-  -- Syntax Highlighting
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'nvim-treesitter/playground'
+  -- Scrollbar
+  use 'psliwka/vim-smoothie'
 
-  -- General
-  use 'Yggdroot/indentLine'
+  -- Editing supports
+  use 'windwp/nvim-ts-autotag'
+  use 'p00f/nvim-ts-rainbow'
+  use 'cohama/lexima.vim'
+  use 'tpope/vim-surround'
   use 'editorconfig/editorconfig-vim'
   use { 'mg979/vim-visual-multi', branch = 'master' }
-  use 'tomtom/tcomment_vim'
-  use 'cohama/lexima.vim'
-  use 'honza/vim-snippets'
+
+  -- Others
   use 'szw/vim-maximizer'
-  use 'tpope/vim-surround'
-  use 'psliwka/vim-smoothie'
-  use 'norcalli/nvim-colorizer.lua'
 end)

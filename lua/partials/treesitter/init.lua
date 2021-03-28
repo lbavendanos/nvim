@@ -5,6 +5,9 @@ require('nvim-treesitter.configs').setup {
     -- disable = { "php", "vue", "tsx" },  -- list of language that will be disabled
   },
   indent = { enable = true },
+  autotag = { enable = true },
+  rainbow = { enable = true },
+  context_commentstring = { enable = true },
   playground = {
     enable = true,
     disable = {},
@@ -20,7 +23,9 @@ require('nvim-treesitter.configs').setup {
       unfocus_language = 'F',
       update = 'R',
       goto_node = '<cr>',
-      show_help = '?',
-    },
-  },
+      show_help = '?'
+    }
+  }
 }
+
+require('nvim_comment').setup()
