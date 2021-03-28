@@ -31,10 +31,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/vim-vsnip'
   use 'honza/vim-snippets'
 
-  -- Lua
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-lua/popup.nvim'
-
   -- Fuzzy Finder
   use 'nvim-telescope/telescope.nvim'
 
@@ -48,6 +44,10 @@ return require('packer').startup(function(use)
   -- Icons
   use 'ryanoasis/vim-devicons'
   use 'kyazdani42/nvim-web-devicons'
+
+  -- Lua Development
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
 
   -- Tabline
   use 'romgrk/barbar.nvim'
