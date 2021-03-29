@@ -1,3 +1,5 @@
-vim.g.indentLine_faster = 1
-vim.g.indentLine_char = '⎸'
-vim.g.indentLine_color_gui = '#212121'
+vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
+vim.g.indent_blankline_char = '▏'
+vim.g.indent_blankline_show_trailing_blankline_indent = false
+
+vim.cmd('highlight IndentBlanklineChar guifg=#121212 gui=nocombine')
