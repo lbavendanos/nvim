@@ -1,3 +1,5 @@
+-- TODO: Remove 'opt' functionality until PR is merged
+-- https://github.com/neovim/neovim/pull/13479
 local opts_info = vim.api.nvim_get_all_options_info()
 local opt = setmetatable({}, {
   __index = vim.o,
@@ -41,8 +43,8 @@ opt.showmode = false -- We don't need to see things like -- INSERT -- anymore
 opt.backup = false -- This is recommended by coc
 opt.writebackup = false -- This is recommended by coc
 vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
-opt.completeopt = 'menuone,noselect'
-opt.colorcolumn = '99999'
+opt.completeopt = 'menuone,noselect' -- Compe option
+opt.colorcolumn = '99999' -- Hack to remove Blank lines in indentline
 opt.signcolumn = 'yes' -- Always show the signcolumn, otherwise it would shift the text each time
 opt.updatetime = 300 -- Faster completion
 opt.clipboard = 'unnamedplus' -- Copy paste between vim and everything else
