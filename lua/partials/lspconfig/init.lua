@@ -50,12 +50,12 @@ function config.on_attach(client, bufnr)
   buf_set_keymap('v', '<leader>ca',
                  ':<C-U>lua require("lspsaga.codeaction").range_code_action()',
                  opts)
-  buf_set_keymap('n', '<C-f>',
-                 '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>',
-                 opts)
-  buf_set_keymap('n', '<C-b>',
-                 '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>',
-                 opts)
+  -- buf_set_keymap('n', '<C-f>',
+  --                '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>',
+  --                opts)
+  -- buf_set_keymap('n', '<C-b>',
+  --                '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>',
+  --                opts)
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
