@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
+  use 'akinsho/flutter-tools.nvim'
 
   -- Completion
   use 'hrsh7th/nvim-compe'

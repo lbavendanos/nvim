@@ -1,5 +1,7 @@
 require('lsp.servers.vim')
 require('lsp.servers.lua')
+-- require('lsp.servers.dart')
+require('lsp.servers.flutter')
 require('lsp.servers.php')
 require('lsp.servers.json')
 require('lsp.servers.tsserver')
