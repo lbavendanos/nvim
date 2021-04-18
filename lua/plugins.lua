@@ -76,7 +76,7 @@ return require('packer').startup(function(use)
   -- Editing supports
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
-  use 'cohama/lexima.vim'
+  use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use 'editorconfig/editorconfig-vim'
   use { 'mg979/vim-visual-multi', branch = 'master' }

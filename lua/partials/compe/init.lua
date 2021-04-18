@@ -71,7 +71,3 @@ vim.api.nvim_set_keymap('i', '<C-Space>', 'compe#complete()', opts)
 vim.api.nvim_set_keymap('i', '<C-e>', 'compe#close("<C-e>")', opts)
 vim.api.nvim_set_keymap('i', '<C-d>', 'compe#scroll({ "delta": +4 })', opts)
 vim.api.nvim_set_keymap('i', '<C-u>', 'compe#scroll({ "delta": -4 })', opts)
-
-vim.g.lexima_no_default_rules = true
-vim.cmd('call lexima#set_default_rules()')
-vim.api.nvim_set_keymap('i', '<CR>', 'compe#confirm(lexima#expand("<LT>CR>", "i"))', opts)
