@@ -4,8 +4,7 @@ require('settings')
 require('mappings')
 
 -- Themes
--- require('themes.nightfly')
-require('themes.moonfly')
+require('themes')
 
 -- Partials
 require('partials')
