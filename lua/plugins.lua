@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
 
   -- Completion
   use 'hrsh7th/nvim-compe'
+  use { 'tzachar/compe-tabnine', run = './install.sh' }
 
   -- Syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
