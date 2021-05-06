@@ -36,7 +36,7 @@ local modes = {
 
 gl.short_line_list = {
   'NvimTree', 'vim-plug', 'help', 'defx', 'nerdtree', 'denite', 'vista',
-  'vista_kind', 'dbui', 'magit', 'packer'
+  'vista_kind', 'dbui', 'magit', 'packer', 'fugitiveblame'
 }
 
 gls.left = {
