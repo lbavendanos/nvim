@@ -5,6 +5,7 @@ vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_disable_netrw = 0
 vim.g.nvim_tree_hijack_netrw = 0
+vim.g.nvim_tree_hijack_cursor = 0
 vim.g.nvim_tree_show_icons = {
   git = 0,
   folders = 1,
