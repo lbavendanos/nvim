@@ -7,10 +7,7 @@ require('nvim-treesitter.configs').setup {
   indent = { enable = true },
   autotag = { enable = true },
   rainbow = { enable = true },
-  context_commentstring = {
-    enable = true,
-    config = { vue = { template_element = '<!-- %s -->' } }
-  },
+  context_commentstring = { enable = true },
   playground = {
     enable = true,
     disable = {},
