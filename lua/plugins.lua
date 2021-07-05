@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
   use { 'glepnir/galaxyline.nvim', branch = 'main' }
 
   -- Indent
-  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
+  use { 'lukas-reineke/indent-blankline.nvim' }
 
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
