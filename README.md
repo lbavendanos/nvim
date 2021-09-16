@@ -8,7 +8,7 @@ Comparing IDE and text editors I had the conclusion that I was looking for a too
 
 There are different articles describing the features of this powerful tool. For me one of them are that it allows you to use only the keyboard for navigation and editing. Another point is that you can configure it depending on what you need for your workflow. This means that it becomes a very personal tool.
 
-## Feature of my personal NeoVim config
+## Features of my personal NeoVim config
 
  - Supported Languages: TypeScript, JavaScript, PHP, HTML, CSS, Dart
  - Supported Frameworks: ReactJS, VueJS, Flutter
