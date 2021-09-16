@@ -1,4 +1,4 @@
-## Intruduction
+## Looking for the ideal text editor
 
 In my work experience I've used different IDE and text editors. I used some IDE like Netbeans, Eclipse and IntelliJ IDEA, which for me are very heavy to the excess of functionality they have. Then I used some text editors such as Sublime Text and VSCode. Both very good text editors that allow you to install the necessary extensions and with this you get a very powerful tool. 
 
@@ -10,6 +10,6 @@ There are different articles describing the features of this powerful tool. For 
 
 ## Features of my personal NeoVim config
 
- - Supported Languages: TypeScript, JavaScript, PHP, HTML, CSS, Dart
- - Supported Frameworks: ReactJS, VueJS, Flutter
+ - Supported languages: TypeScript, JavaScript, PHP, HTML, CSS, Dart
+ - Supported frameworks: ReactJS, VueJS, Flutter
  - General features: Git, Fuzzy Finder, File explorer, Snippets
