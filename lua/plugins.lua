@@ -74,6 +74,7 @@ return require('packer').startup(function(use)
   -- Comment
   use 'terrortylor/nvim-comment'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'folke/todo-comments.nvim'
 
   -- Scrollbar
   use 'psliwka/vim-smoothie'
