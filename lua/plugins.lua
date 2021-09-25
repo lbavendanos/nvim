@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'rinx/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
+  use 'folke/lsp-colors.nvim'
+  use 'folke/trouble.nvim'
   use 'akinsho/flutter-tools.nvim'
 
   -- Completion
