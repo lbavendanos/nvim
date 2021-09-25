@@ -11,9 +11,10 @@ function config.on_attach(client, bufnr)
 
   buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  -- buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<leader>k', '<cmd>lua vim.lsp.buf.signature_help()<CR>',
+                 opts)
   -- buf_set_keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   -- buf_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   -- buf_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -33,12 +34,12 @@ function config.on_attach(client, bufnr)
   buf_set_keymap('n', 'gp',
                  '<cmd>lua require"lspsaga.provider".preview_definition()<CR>',
                  opts)
-  buf_set_keymap('n', 'K',
-                 '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>',
-                 opts)
-  buf_set_keymap('n', '<leader>k',
-                 '<cmd>lua require("lspsaga.signaturehelp").signature_help()<CR>',
-                 opts)
+  -- buf_set_keymap('n', 'K',
+  --                '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>',
+  --                opts)
+  -- buf_set_keymap('n', '<leader>k',
+  --                '<cmd>lua require("lspsaga.signaturehelp").signature_help()<CR>',
+  --                opts)
   buf_set_keymap('n', '<leader>rn',
                  '<cmd>lua require("lspsaga.rename").rename()<CR>', opts)
   buf_set_keymap('n', 'gr',
