@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'rinx/lspsaga.nvim'
+  use 'ray-x/lsp_signature.nvim'
   use 'onsails/lspkind-nvim'
   use 'folke/lsp-colors.nvim'
   use 'folke/trouble.nvim'
