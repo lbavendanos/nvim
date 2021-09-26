@@ -25,8 +25,15 @@ return require('packer').startup(function(use)
   use 'akinsho/flutter-tools.nvim'
 
   -- Completion
-  use 'hrsh7th/nvim-compe'
-  use { 'tzachar/compe-tabnine', run = './install.sh' }
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-buffer', 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-nvim-lua',
+      'hrsh7th/cmp-path', 'hrsh7th/cmp-calc', 'octaltree/cmp-look',
+      'hrsh7th/cmp-emoji', 'hrsh7th/cmp-vsnip'
+    }
+  }
+  use { 'tzachar/cmp-tabnine', run = './install.sh' }
 
   -- Syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
