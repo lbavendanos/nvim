@@ -1,4 +1,3 @@
-vim.g.nvim_tree_width = 40
 vim.g.nvim_tree_ignore = { '.git' }
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
@@ -18,5 +17,6 @@ require('nvim-tree').setup({
   disable_netrw = false,
   hijack_netrw = false,
   hijack_cursor = false,
-  update_focused_file = { enable = true }
+  update_focused_file = { enable = true },
+  view = { width = 40 }
 })
