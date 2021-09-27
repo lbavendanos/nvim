@@ -73,10 +73,13 @@ return require('packer').startup(function(use)
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
 
+  -- Terminal
+  use 'akinsho/toggleterm.nvim'
+
   -- Git
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
-  use 'akinsho/toggleterm.nvim'
+  use 'sindrets/diffview.nvim'
 
   -- Comment
   use 'terrortylor/nvim-comment'
