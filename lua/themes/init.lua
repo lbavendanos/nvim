@@ -1,5 +1,5 @@
--- require('themes.nightfly')
-require('themes.moonfly')
+require('themes.nightfly')
+-- require('themes.moonfly')
 
 local colors = { black = '#000000', gray = '#181A1F' }
 
