@@ -1,30 +1,66 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
+local function prequire(...)
+  local status, lib = pcall(require, ...)
+  if (status) then return lib end
+  return nil
+end
+
+local luasnip = prequire('luasnip')
 
 local source_mapping = {
   buffer = '[Buffer]',
   nvim_lsp = '[LSP]',
   nvim_lua = '[Lua]',
-  cmp_tabnine = '[TabNine]',
-  -- luasnip = '[LuaSnip]',
-  -- latex_symbols = '[Latex]',
+  cmp_tabnine = '[TN]',
+  luasnip = '[LuaSnip]',
+  latex_symbols = '[Latex]',
   path = '[Path]',
   calc = '[Calc]',
   look = '[Look]',
   emoji = '[Emoji]'
 }
 
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+  local col = vim.fn.col('.') - 1
+  return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
+end
+
+local function tab(fallback)
+  if vim.fn.getbufvar(vim.fn.bufnr(), '&filetype') == 'TelescopePrompt' then
+    fallback()
+  elseif vim.fn.pumvisible() == 1 then
+    vim.fn.feedkeys(t('<C-n>'), 'n')
+  elseif luasnip and luasnip.expand_or_jumpable() then
+    vim.fn.feedkeys(t('<Plug>luasnip-expand-or-jump'), '')
+  elseif check_back_space() then
+    vim.fn.feedkeys(t('<tab>'), 'n')
+  else
+    fallback()
+  end
+end
+
+local function shift_tab(fallback)
+  if vim.fn.getbufvar(vim.fn.bufnr(), '&filetype') == 'TelescopePrompt' then
+    fallback()
+  elseif vim.fn.pumvisible() == 1 then
+    vim.fn.feedkeys(t('<C-p>'), 'n')
+  elseif luasnip and luasnip.jumpable(-1) then
+    vim.fn.feedkeys(t('<Plug>luasnip-jump-prev'), '')
+  else
+    fallback()
+  end
+end
+
 cmp.setup({
   snippet = {
     expand = function(args)
-      -- For `vsnip` user.
-      vim.fn['vsnip#anonymous'](args.body)
-
       -- For `luasnip` user.
-      -- require('luasnip').lsp_expand(args.body)
-
-      -- For `ultisnips` user.
-      -- vim.fn["UltiSnips#Anon"](args.body)
+      require('luasnip').lsp_expand(args.body)
     end
 
   },
@@ -37,22 +73,24 @@ cmp.setup({
       -- behavior = cmp.ConfirmBehavior.Replace,
       select = true
     }),
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' })
+    ['<Tab>'] = cmp.mapping(tab, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(shift_tab, { 'i', 's' })
   },
   sources = {
     { name = 'buffer' }, { name = 'nvim_lsp' }, { name = 'nvim_lua' },
-    { name = 'cmp_tabnine' }, -- { name = 'vsnip' }, -- For vsnip user.
-    -- { name = 'luasnip' }, -- For luasnip use.
-    -- { name = 'ultisnips' }, -- For ultisnips user.
-    { name = 'path' }, { name = 'calc' }, { name = 'look' }, { name = 'emoji' }
+    { name = 'cmp_tabnine' }, { name = 'luasnip' }, { name = 'path' },
+    { name = 'calc' }, { name = 'look' }, { name = 'emoji' }
   },
   formatting = {
     format = function(entry, vim_item)
+      -- fancy icons and a name of kind
       vim_item.kind = lspkind.presets.default[vim_item.kind] .. ' ' ..
                         vim_item.kind
 
+      -- set a name for each source
       local menu = source_mapping[entry.source.name]
+
+      -- fancy tabnine icon
       if entry.source.name == 'cmp_tabnine' then
         if entry.completion_item.data ~= nil and
           entry.completion_item.data.detail ~= nil then
@@ -60,6 +98,7 @@ cmp.setup({
         end
         vim_item.kind = '' .. ' ' .. vim_item.kind
       end
+
       vim_item.menu = menu
       return vim_item
     end
