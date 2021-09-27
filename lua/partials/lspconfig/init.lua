@@ -6,6 +6,11 @@ function config.on_attach(client, bufnr)
 
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+  vim.lsp.handlers['textDocument/hover'] =
+    vim.lsp.with(vim.lsp.handlers.hover, { border = 'single' })
+  -- vim.lsp.handlers['textDocument/signatureHelp'] =
+  --   vim.lsp.with(vim.lsp.handlers.signatureHelp, { border = 'single' })
+
   -- Mappings.
   local opts = { noremap = true, silent = true }
 
@@ -24,9 +29,14 @@ function config.on_attach(client, bufnr)
   -- buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap('n', 'gR', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   buf_set_keymap('n', '<leader>i',
-                 '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-  buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+                 '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({border = "single"})<CR>',
+                 opts)
+  buf_set_keymap('n', '[d',
+                 '<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = "single"}})<CR>',
+                 opts)
+  buf_set_keymap('n', ']d',
+                 '<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = "single"}})<CR>',
+                 opts)
   -- buf_set_keymap('n', '<leader>d',
   --                '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
