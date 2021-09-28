@@ -87,7 +87,7 @@ return require('packer').startup(function(use)
   use 'folke/todo-comments.nvim'
 
   -- Scrollbar
-  use 'psliwka/vim-smoothie'
+  use 'karb94/neoscroll.nvim'
 
   -- Editing supports
   use 'windwp/nvim-ts-autotag'
