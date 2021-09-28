@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
     requires = {
       'hrsh7th/cmp-buffer', 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-nvim-lua',
       'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
-      'octaltree/cmp-look', 'hrsh7th/cmp-emoji'
+      'hrsh7th/cmp-emoji'
     }
   }
   use { 'tzachar/cmp-tabnine', run = './install.sh' }

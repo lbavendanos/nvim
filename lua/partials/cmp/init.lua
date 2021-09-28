@@ -17,7 +17,6 @@ local source_mapping = {
   latex_symbols = '[Latex]',
   path = '[Path]',
   calc = '[Calc]',
-  look = '[Look]',
   emoji = '[Emoji]'
 }
 
@@ -79,7 +78,7 @@ cmp.setup({
   sources = {
     { name = 'buffer' }, { name = 'nvim_lsp' }, { name = 'nvim_lua' },
     { name = 'cmp_tabnine' }, { name = 'luasnip' }, { name = 'path' },
-    { name = 'calc' }, { name = 'look' }, { name = 'emoji' }
+    { name = 'calc' }, { name = 'emoji' }
   },
   formatting = {
     format = function(entry, vim_item)
