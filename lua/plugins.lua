@@ -65,7 +65,8 @@ return require('packer').startup(function(use)
   use 'romgrk/barbar.nvim'
 
   -- Statusline
-  use { 'glepnir/galaxyline.nvim', branch = 'main' }
+  -- use { 'glepnir/galaxyline.nvim', branch = 'main' }
+  use 'shadmansaleh/lualine.nvim'
 
   -- Indent
   use { 'lukas-reineke/indent-blankline.nvim' }
