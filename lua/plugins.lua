@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+  use 'jose-elias-alvarez/null-ls.nvim'
   use 'tami5/lspsaga.nvim'
   use 'ray-x/lsp_signature.nvim'
   use 'onsails/lspkind-nvim'
