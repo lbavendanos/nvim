@@ -34,8 +34,8 @@ end
 local function tab(fallback)
   if vim.fn.getbufvar(vim.fn.bufnr(), '&filetype') == 'TelescopePrompt' then
     fallback()
-  elseif vim.fn.pumvisible() == 1 then
-    vim.fn.feedkeys(t('<C-n>'), 'n')
+  elseif cmp.visible() then
+    cmp.select_next_item()
   elseif luasnip and luasnip.expand_or_jumpable() then
     vim.fn.feedkeys(t('<Plug>luasnip-expand-or-jump'), '')
   elseif check_back_space() then
@@ -48,8 +48,8 @@ end
 local function shift_tab(fallback)
   if vim.fn.getbufvar(vim.fn.bufnr(), '&filetype') == 'TelescopePrompt' then
     fallback()
-  elseif vim.fn.pumvisible() == 1 then
-    vim.fn.feedkeys(t('<C-p>'), 'n')
+  elseif cmp.visible() then
+    cmp.select_prev_item()
   elseif luasnip and luasnip.jumpable(-1) then
     vim.fn.feedkeys(t('<Plug>luasnip-jump-prev'), '')
   else
