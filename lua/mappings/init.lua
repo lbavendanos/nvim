@@ -16,8 +16,8 @@ vim.api.nvim_set_keymap('n', '<leader>s', ':w<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', opts)
 
 -- Move selected line
-vim.api.nvim_set_keymap('v', 'J', ':m \'>+1<CR>gv=gv', opts)
-vim.api.nvim_set_keymap('v', 'K', ':m \'<-2<CR>gv=gv', opts)
+vim.api.nvim_set_keymap('v', 'J', ":m '>+1<CR>gv=gv", opts)
+vim.api.nvim_set_keymap('v', 'K', ":m '<-2<CR>gv=gv", opts)
 
 -- Windows navigation
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', opts)

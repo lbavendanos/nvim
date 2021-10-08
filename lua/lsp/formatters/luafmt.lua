@@ -7,5 +7,5 @@ return {
     --spaces-inside-table-braces \
     --double-quote-to-single-quote \
   ]],
-  formatStdin = true
+  formatStdin = true,
 }

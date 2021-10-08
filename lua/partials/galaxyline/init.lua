@@ -18,7 +18,7 @@ local colors = {
   blue = '#82AAFF',
   green = '#50FA7B',
   cyan = '#8BE9FD',
-  gray = '#212121'
+  gray = '#212121',
 }
 
 local modes = {
@@ -31,23 +31,36 @@ local modes = {
   [86] = 'V-LINE',
   [82] = 'REPLACE',
   [115] = 'SELECT',
-  [83] = 'S-LINE'
+  [83] = 'S-LINE',
 }
 
 gl.short_line_list = {
-  'NvimTree', 'vim-plug', 'help', 'defx', 'nerdtree', 'denite', 'vista',
-  'vista_kind', 'dbui', 'magit', 'packer', 'fugitiveblame'
+  'NvimTree',
+  'vim-plug',
+  'help',
+  'defx',
+  'nerdtree',
+  'denite',
+  'vista',
+  'vista_kind',
+  'dbui',
+  'magit',
+  'packer',
+  'fugitiveblame',
 }
 
 gls.left = {
   {
     StartIcon = {
-      provider = function() return '   ' end,
+      provider = function()
+        return '   '
+      end,
       highlight = { colors.black, colors.green },
       separator = ' ',
-      separator_highlight = { colors.black, colors.green }
-    }
-  }, {
+      separator_highlight = { colors.black, colors.green },
+    },
+  },
+  {
     ViMode = {
       provider = function()
         local byte = vim.fn.mode():byte()
@@ -55,9 +68,10 @@ gls.left = {
 
         return '  ' .. mode .. '  '
       end,
-      highlight = { colors.bg, colors.blue, 'bold' }
-    }
-  }, {
+      highlight = { colors.bg, colors.blue, 'bold' },
+    },
+  },
+  {
     FileName = {
       provider = function()
         local current = fileinfo.get_current_file_name()
@@ -69,9 +83,10 @@ gls.left = {
       end,
       highlight = { colors.black, colors.cyan },
       separator = ' ',
-      separator_highlight = { colors.black, colors.cyan }
-    }
-  }, {
+      separator_highlight = { colors.black, colors.cyan },
+    },
+  },
+  {
     GitBranch = {
       provider = function()
         local branch = vcs.get_git_branch():gsub('%s+', '')
@@ -79,14 +94,17 @@ gls.left = {
         return ' ' .. branch .. ' '
       end,
       condition = condition.check_git_workspace,
-      highlight = { colors.black, colors.pink }
-    }
-  }, {
+      highlight = { colors.black, colors.pink },
+    },
+  },
+  {
     LastSpace = {
-      provider = function() return '' end,
-      highlight = { colors.black, colors.gray }
-    }
-  }
+      provider = function()
+        return ''
+      end,
+      highlight = { colors.black, colors.gray },
+    },
+  },
 }
 
 gls.right = {
@@ -102,9 +120,10 @@ gls.right = {
       condition = condition.buffer_not_empty,
       highlight = { colors.black, colors.orange },
       separator = ' ',
-      separator_highlight = { colors.black, colors.orange }
-    }
-  }, {
+      separator_highlight = { colors.black, colors.orange },
+    },
+  },
+  {
     FileInfo = {
       provider = function()
         local fileEncode = fileinfo.get_file_encode()
@@ -112,9 +131,10 @@ gls.right = {
 
         return ' ' .. fileEncode:lower() .. ' ' .. fileFormat:lower() .. ' '
       end,
-      highlight = { colors.black, colors.cyan }
-    }
-  }, {
+      highlight = { colors.black, colors.cyan },
+    },
+  },
+  {
     LineInfo = {
       provider = function()
         local linePercent = fileinfo.current_line_percent()
@@ -122,9 +142,9 @@ gls.right = {
 
         return ' ' .. linePercent .. ' ' .. lineColumn .. ' '
       end,
-      highlight = { colors.black, colors.purple }
-    }
-  }
+      highlight = { colors.black, colors.purple },
+    },
+  },
 }
 
 gls.short_line_left = {
@@ -135,14 +155,15 @@ gls.short_line_left = {
 
         return ' ' .. icon
       end,
-      highlight = { colors.fg, colors.gray }
-    }
-  }, {
+      highlight = { colors.fg, colors.gray },
+    },
+  },
+  {
     ShortBufferName = {
       provider = fileinfo.get_current_file_name,
-      highlight = { colors.fg, colors.gray }
-    }
-  }
+      highlight = { colors.fg, colors.gray },
+    },
+  },
 }
 
 gls.short_line_right = {
@@ -154,9 +175,10 @@ gls.short_line_right = {
 
         return ' ' .. fileEncode:lower() .. ' ' .. fileFormat:lower() .. ' '
       end,
-      highlight = { colors.fg, colors.gray }
-    }
-  }, {
+      highlight = { colors.fg, colors.gray },
+    },
+  },
+  {
     ShortLineInfo = {
       provider = function()
         local linePercent = fileinfo.current_line_percent()
@@ -164,7 +186,7 @@ gls.short_line_right = {
 
         return ' ' .. linePercent .. ' ' .. lineColumn .. ' '
       end,
-      highlight = { colors.fg, colors.gray }
-    }
-  }
+      highlight = { colors.fg, colors.gray },
+    },
+  },
 }

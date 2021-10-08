@@ -18,12 +18,12 @@ local languages = {
   html = { prettier },
   css = { prettier },
   scss = { prettier },
-  markdown = { prettier }
+  markdown = { prettier },
 }
 
-lspconfig.efm.setup {
+lspconfig.efm.setup({
   on_attach = on_attach,
   init_options = { documentFormatting = true },
   filetypes = vim.tbl_keys(languages),
-  settings = { rootMarkers = { '.git/' }, languages = languages }
-}
+  settings = { rootMarkers = { '.git/' }, languages = languages },
+})
