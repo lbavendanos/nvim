@@ -10,4 +10,4 @@ local sources = {
 
 null_ls.config({ sources = sources })
 
-lspconfig['null-ls'].setup({ on_attach = on_attach })
+lspconfig['null-ls'].setup({ on_attach = on_attach, autostart = true })
