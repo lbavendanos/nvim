@@ -70,7 +70,7 @@ return require('packer').startup(function(use)
 
   -- Statusline
   -- use { 'glepnir/galaxyline.nvim', branch = 'main' }
-  use('shadmansaleh/lualine.nvim')
+  use('nvim-lualine/lualine.nvim')
 
   -- Indent
   use({ 'lukas-reineke/indent-blankline.nvim' })
