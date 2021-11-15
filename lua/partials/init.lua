@@ -1,6 +1,7 @@
 -- require('partials.galaxyline')
 require('partials.lualine')
-require('partials.barbar')
+-- require('partials.barbar')
+require('partials.tabline')
 require('partials.telescope')
 require('partials.tree')
 require('partials.treesitter')

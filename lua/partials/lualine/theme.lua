@@ -1,0 +1,60 @@
+local colors = {
+  black = '#0d0d0d',
+  green = '#50fa7b',
+  pink = '#ff79c6',
+  purple = '#bd93f9',
+  blue = '#82aaff',
+  cyan = '#8be9fd',
+  orange = '#ffb86c',
+}
+
+return {
+  normal = {
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.blue, fg = colors.black, gui = 'bold' },
+    c = { bg = colors.black, fg = colors.blue },
+    x = { bg = colors.orange, fg = colors.black },
+    y = { bg = colors.cyan, fg = colors.black },
+    z = { bg = colors.purple, fg = colors.black },
+  },
+  insert = {
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.purple, fg = colors.black, gui = 'bold' },
+    c = { bg = colors.black, fg = colors.purple },
+    x = { bg = colors.orange, fg = colors.black },
+    y = { bg = colors.cyan, fg = colors.black },
+    z = { bg = colors.purple, fg = colors.black },
+  },
+  visual = {
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.orange, fg = colors.black, gui = 'bold' },
+    c = { bg = colors.black, fg = colors.orange },
+    x = { bg = colors.orange, fg = colors.black },
+    y = { bg = colors.cyan, fg = colors.black },
+    z = { bg = colors.purple, fg = colors.black },
+  },
+  replace = {
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.cyan, fg = colors.black, gui = 'bold' },
+    c = { bg = colors.black, fg = colors.cyan },
+    x = { bg = colors.orange, fg = colors.black },
+    y = { bg = colors.cyan, fg = colors.black },
+    z = { bg = colors.purple, fg = colors.black },
+  },
+  command = {
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.pink, fg = colors.black, gui = 'bold' },
+    c = { bg = colors.black, fg = colors.pink },
+    x = { bg = colors.orange, fg = colors.black },
+    y = { bg = colors.cyan, fg = colors.black },
+    z = { bg = colors.purple, fg = colors.black },
+  },
+  inactive = {
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.blue, fg = colors.black, gui = 'bold' },
+    c = { bg = colors.black, fg = colors.blue },
+    x = { bg = colors.purple, fg = colors.black },
+    y = { bg = colors.cyan, fg = colors.black },
+    z = { bg = colors.purple, fg = colors.black },
+  },
+}

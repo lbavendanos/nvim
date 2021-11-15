@@ -66,7 +66,8 @@ return require('packer').startup(function(use)
   use('nvim-lua/popup.nvim')
 
   -- Tabline
-  use('romgrk/barbar.nvim')
+  -- use('romgrk/barbar.nvim')
+  use('kdheepak/tabline.nvim')
 
   -- Statusline
   -- use { 'glepnir/galaxyline.nvim', branch = 'main' }
@@ -104,4 +105,5 @@ return require('packer').startup(function(use)
 
   -- Others
   use('szw/vim-maximizer')
+  use('moll/vim-bbye')
 end)
