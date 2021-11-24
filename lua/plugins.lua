@@ -49,6 +49,7 @@ return require('packer').startup(function(use)
 
   -- Fuzzy Finder
   use('nvim-telescope/telescope.nvim')
+  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
 
   -- Colors
   use('norcalli/nvim-colorizer.lua')
