@@ -1,5 +1,5 @@
 local lspconfig = require('lspconfig')
-local configs = require('lspconfig/configs')
+local configs = require('lspconfig.configs')
 local on_attach = require('partials.lspconfig').on_attach
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
