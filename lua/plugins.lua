@@ -93,9 +93,6 @@ return require('packer').startup(function(use)
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use('folke/todo-comments.nvim')
 
-  -- Scrollbar
-  use('karb94/neoscroll.nvim')
-
   -- Editing supports
   use('windwp/nvim-ts-autotag')
   use('p00f/nvim-ts-rainbow')
