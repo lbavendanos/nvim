@@ -6,6 +6,8 @@ local colors = {
   blue = '#82aaff',
   cyan = '#8be9fd',
   orange = '#ffb86c',
+  yellow = '#F1FA8C',
+  red = '#FF5555',
 }
 
 return {
