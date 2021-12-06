@@ -75,7 +75,7 @@ return require('packer').startup(function(use)
   use('nvim-lualine/lualine.nvim')
 
   -- Indent
-  use({ 'lukas-reineke/indent-blankline.nvim' })
+  -- use('lukas-reineke/indent-blankline.nvim')
 
   -- File explorer
   use('kyazdani42/nvim-tree.lua')
