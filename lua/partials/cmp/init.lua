@@ -109,4 +109,6 @@ cmp.setup({
   },
 })
 
+vim.cmd('autocmd FileType TelescopePrompt lua require("cmp").setup.buffer { enabled = false }')
+
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
