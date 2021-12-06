@@ -1,13 +1,14 @@
-local custom_theme = require('partials.lualine.theme')
+local custom_theme = require('partials.lualine.themes.custom')
 local default_config = require('lualine').get_config()
+local colors = require('utils.colors')
 local lualine_c = {
   'branch',
   {
     'diff',
     diff_color = {
-      added = { fg = '#50fa7b' },
-      modified = { fg = '#bd93f9' },
-      removed = { fg = '#ff5555' },
+      added = { fg = colors.green },
+      modified = { fg = colors.purple },
+      removed = { fg = colors.red },
     },
   },
   { 'diagnostics', sources = { 'nvim_lsp', 'coc' } },
