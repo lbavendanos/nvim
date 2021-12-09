@@ -11,7 +11,7 @@ local lualine_c = {
       removed = { fg = colors.red },
     },
   },
-  { 'diagnostics', sources = { 'nvim_lsp', 'coc' } },
+  { 'diagnostics', sources = { 'nvim_diagnostic', 'coc' } },
   'filename',
 }
 
