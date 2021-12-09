@@ -36,20 +36,20 @@ function config.on_attach(client, bufnr)
   --                '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
   -- Saga keybinds
-  buf_set_keymap('n', 'gp', '<cmd>lua require"lspsaga.provider".preview_definition()<CR>', opts)
+  buf_set_keymap('n', 'gp', '<cmd>Lspsaga preview_definition<CR>', opts)
   -- buf_set_keymap('n', 'K',
   --                '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>',
   --                opts)
   -- buf_set_keymap('n', '<leader>k',
   --                '<cmd>lua require("lspsaga.signaturehelp").signature_help()<CR>',
   --                opts)
-  buf_set_keymap('n', '<leader>rn', '<cmd>lua require("lspsaga.rename").rename()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua require"lspsaga.provider".lsp_finder()<CR>', opts)
+  buf_set_keymap('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>Lspsaga lsp_finder<CR>', opts)
   -- buf_set_keymap('n', '<leader>i',
   --                '<cmd>lua require"lspsaga.diagnostic".show_line_diagnostics()<CR>',
   --                opts)
-  buf_set_keymap('n', '<leader>ca', '<cmd>lua require("lspsaga.codeaction").code_action()<CR>', opts)
-  buf_set_keymap('v', '<leader>ca', ':<C-U>lua require("lspsaga.codeaction").range_code_action()', opts)
+  buf_set_keymap('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
+  buf_set_keymap('x', '<leader>ca', ':<C-U>Lspsaga range_code_action<CR>', opts)
   -- buf_set_keymap('n', '<C-f>',
   --                '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>',
   --                opts)
