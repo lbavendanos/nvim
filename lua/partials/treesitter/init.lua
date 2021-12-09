@@ -4,7 +4,7 @@ require('nvim-treesitter.configs').setup({
     enable = true, -- false will disable the whole extension
     -- disable = { 'php', 'vue', 'tsx', 'typescript' }, -- list of language that will be disabled
   },
-  -- indent = { enable = true },
+  indent = { enable = true },
   autotag = { enable = true },
   rainbow = { enable = true },
   context_commentstring = { enable = true },
