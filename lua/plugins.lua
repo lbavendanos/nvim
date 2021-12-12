@@ -50,6 +50,12 @@ return require('packer').startup(function(use)
   -- Fuzzy Finder
   use('nvim-telescope/telescope.nvim')
   use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+  use({
+    'AckslD/nvim-neoclip.lua',
+    config = function()
+      require('neoclip').setup()
+    end,
+  })
 
   -- Colors
   use('norcalli/nvim-colorizer.lua')
