@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
   -- Snippets
   use('L3MON4D3/LuaSnip')
   use('rafamadriz/friendly-snippets')
+  use('burkeholland/simple-react-snippets')
 
   -- Fuzzy Finder
   use('nvim-telescope/telescope.nvim')
