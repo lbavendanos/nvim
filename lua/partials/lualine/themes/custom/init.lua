@@ -4,7 +4,7 @@ return {
   normal = {
     a = { bg = colors.green, fg = colors.black },
     b = { bg = colors.blue, fg = colors.black, gui = 'bold' },
-    c = { bg = colors.black, fg = colors.blue },
+    c = { bg = colors.gray, fg = colors.blue },
     x = { bg = colors.orange, fg = colors.black },
     y = { bg = colors.cyan, fg = colors.black },
     z = { bg = colors.purple, fg = colors.black },
@@ -12,7 +12,7 @@ return {
   insert = {
     a = { bg = colors.green, fg = colors.black },
     b = { bg = colors.purple, fg = colors.black, gui = 'bold' },
-    c = { bg = colors.black, fg = colors.purple },
+    c = { bg = colors.gray, fg = colors.purple },
     x = { bg = colors.orange, fg = colors.black },
     y = { bg = colors.cyan, fg = colors.black },
     z = { bg = colors.purple, fg = colors.black },
@@ -20,7 +20,7 @@ return {
   visual = {
     a = { bg = colors.green, fg = colors.black },
     b = { bg = colors.orange, fg = colors.black, gui = 'bold' },
-    c = { bg = colors.black, fg = colors.orange },
+    c = { bg = colors.gray, fg = colors.orange },
     x = { bg = colors.orange, fg = colors.black },
     y = { bg = colors.cyan, fg = colors.black },
     z = { bg = colors.purple, fg = colors.black },
@@ -28,7 +28,7 @@ return {
   replace = {
     a = { bg = colors.green, fg = colors.black },
     b = { bg = colors.cyan, fg = colors.black, gui = 'bold' },
-    c = { bg = colors.black, fg = colors.cyan },
+    c = { bg = colors.gray, fg = colors.cyan },
     x = { bg = colors.orange, fg = colors.black },
     y = { bg = colors.cyan, fg = colors.black },
     z = { bg = colors.purple, fg = colors.black },
@@ -36,7 +36,7 @@ return {
   command = {
     a = { bg = colors.green, fg = colors.black },
     b = { bg = colors.pink, fg = colors.black, gui = 'bold' },
-    c = { bg = colors.black, fg = colors.pink },
+    c = { bg = colors.gray, fg = colors.pink },
     x = { bg = colors.orange, fg = colors.black },
     y = { bg = colors.cyan, fg = colors.black },
     z = { bg = colors.purple, fg = colors.black },
@@ -44,7 +44,7 @@ return {
   inactive = {
     a = { bg = colors.green, fg = colors.black },
     b = { bg = colors.blue, fg = colors.black, gui = 'bold' },
-    c = { bg = colors.black, fg = colors.blue },
+    c = { bg = colors.gray, fg = colors.blue },
     x = { bg = colors.purple, fg = colors.black },
     y = { bg = colors.cyan, fg = colors.black },
     z = { bg = colors.purple, fg = colors.black },
