@@ -5,6 +5,7 @@ require('themes.nightfly')
 
 vim.cmd('highlight Normal guibg=' .. colors.black)
 vim.cmd('highlight VertSplit guibg=' .. colors.black .. ' guifg=' .. colors.dark_blue)
+vim.cmd('highlight FloatBorder guifg=' .. colors.dark_purple)
 
 vim.cmd([[
   set guicursor=n-v-c:block-Cursor
