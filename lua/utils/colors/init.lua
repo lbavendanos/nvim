@@ -1,5 +1,7 @@
 return {
-  black = '#0d0d0d',
+  white = '#ffffff',
+  black = '#000000',
+  gray = '#181A1F',
   green = '#50fa7b',
   pink = '#ff79c6',
   purple = '#bd93f9',
@@ -8,4 +10,7 @@ return {
   orange = '#ffb86c',
   yellow = '#f1fa8c',
   red = '#ff5555',
+  dark_purple = '#2a0f52',
+  dark_blue = '#0c2252',
+  chetwode_blue = '#6272a4',
 }
