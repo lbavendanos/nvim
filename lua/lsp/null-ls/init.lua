@@ -1,5 +1,4 @@
 local null_ls = require('null-ls')
-local lspconfig = require('lspconfig')
 local on_attach = require('partials.lspconfig').on_attach
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -9,10 +8,9 @@ local sources = {
   null_ls.builtins.formatting.prettierd,
 }
 
-null_ls.config({ sources = sources })
-
-lspconfig['null-ls'].setup({
+null_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   autostart = true,
+  sources = sources,
 })
