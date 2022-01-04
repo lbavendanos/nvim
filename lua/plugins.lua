@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
   -- Fuzzy Finder
   use('nvim-telescope/telescope.nvim')
   use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+  use({ 'nvim-telescope/telescope-file-browser.nvim' })
   use({
     'AckslD/nvim-neoclip.lua',
     config = function()

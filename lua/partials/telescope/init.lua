@@ -9,12 +9,18 @@ local config = {
       theme = 'cursor',
     },
   },
+  extensions = {
+    file_browser = {
+      respect_gitignore = true,
+    },
+  },
 }
 
 require('telescope').setup(config)
 -- Extensions
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('neoclip')
+require('telescope').load_extension('file_browser')
 
 require('partials.telescope.highlight')
 require('partials.telescope.mappings')
