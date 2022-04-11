@@ -1,4 +1,3 @@
-vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_show_icons = {
   git = 0,
@@ -17,6 +16,11 @@ require('nvim-tree').setup({
   hijack_cursor = false,
   update_focused_file = { enable = true },
   view = { width = 40 },
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+  },
   filters = {
     custom = { '.git' },
   },
