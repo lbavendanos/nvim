@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-calc',
       'hrsh7th/cmp-emoji',
+      'hrsh7th/cmp-cmdline',
     },
   })
   use({ 'tzachar/cmp-tabnine', run = './install.sh' })

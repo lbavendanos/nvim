@@ -49,16 +49,20 @@ cmp.setup({
       require('luasnip').lsp_expand(args.body)
     end,
   },
-  mapping = {
-    ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-    ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+  window = {
+    -- completion = cmp.config.window.bordered(),
+    -- documentation = cmp.config.window.bordered(),
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<Tab>'] = cmp.mapping(tab, { 'i', 's' }),
     ['<S-Tab>'] = cmp.mapping(shift_tab, { 'i', 's' }),
-  },
-  sources = {
+  }),
+  sources = cmp.config.sources({
     { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'nvim_lua' },
@@ -67,7 +71,7 @@ cmp.setup({
     { name = 'path' },
     { name = 'calc' },
     { name = 'emoji' },
-  },
+  }),
   formatting = {
     format = function(entry, vim_item)
       -- fancy icons and a name of kind
