@@ -77,7 +77,7 @@ return require('packer').startup(function(use)
 
   -- Tabline
   -- use('romgrk/barbar.nvim')
-  use('kdheepak/tabline.nvim')
+  use({ 'kdheepak/tabline.nvim', commit = 'bbaf9a97b24ae2d4f0c7d8751d5f28aa45332480' })
 
   -- Statusline
   -- use { 'glepnir/galaxyline.nvim', branch = 'main' }
