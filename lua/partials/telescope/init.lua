@@ -22,6 +22,7 @@ require('telescope').load_extension('fzf')
 require('telescope').load_extension('neoclip')
 require('telescope').load_extension('file_browser')
 require('telescope').load_extension('ui-select')
+require('telescope').load_extension('live_grep_raw')
 
 require('partials.telescope.highlight')
 require('partials.telescope.mappings')

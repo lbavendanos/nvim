@@ -7,5 +7,6 @@ vim.api.nvim_set_keymap(
   '<cmd>lua require "telescope".extensions.file_browser.file_browser()<CR>',
   opts
 )
-vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>lua require("telescope").extensions.live_grep_raw.live_grep_raw()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>lua require("telescope.builtin").buffers()<CR>', opts)
