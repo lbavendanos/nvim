@@ -1,13 +1,3 @@
-vim.g.nvim_tree_git_hl = 1
-vim.g.nvim_tree_show_icons = {
-  git = 0,
-  folders = 1,
-  files = 1,
-  folder_arrows = 0,
-}
-
--- vim.cmd('autocmd BufWinEnter,FileType NvimTree setlocal cursorline')
-
 vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true })
 
 require('nvim-tree').setup({
@@ -17,8 +7,17 @@ require('nvim-tree').setup({
   update_focused_file = { enable = true },
   view = { width = 40 },
   renderer = {
+    highlight_git = true,
     indent_markers = {
       enable = true,
+    },
+    icons = {
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = false,
+        git = false,
+      },
     },
   },
   filters = {
