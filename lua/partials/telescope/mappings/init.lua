@@ -8,5 +8,10 @@ vim.api.nvim_set_keymap(
   opts
 )
 -- vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>lua require("telescope").extensions.live_grep_raw.live_grep_raw()<CR>', opts)
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>o',
+  '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
+  opts
+)
 vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>lua require("telescope.builtin").buffers()<CR>', opts)
