@@ -38,18 +38,18 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-cmdline',
     },
   })
-  use({ 'tzachar/cmp-tabnine', run = './install.sh' })
-  use({ 'github/copilot.vim' })
-  use({
-    'zbirenbaum/copilot.lua',
-    event = { 'VimEnter' },
-    config = function()
-      vim.defer_fn(function()
-        require('copilot').setup()
-      end, 100)
-    end,
-  })
-  use({ 'zbirenbaum/copilot-cmp', module = 'copilot_cmp' })
+  -- use({ 'tzachar/cmp-tabnine', run = './install.sh' })
+  -- use({ 'github/copilot.vim' })
+  -- use({
+  --   'zbirenbaum/copilot.lua',
+  --   event = { 'VimEnter' },
+  --   config = function()
+  --     vim.defer_fn(function()
+  --       require('copilot').setup()
+  --     end, 100)
+  --   end,
+  -- })
+  -- use({ 'zbirenbaum/copilot-cmp', module = 'copilot_cmp' })
 
   -- Syntax
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
