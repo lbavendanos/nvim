@@ -38,18 +38,6 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-cmdline',
     },
   })
-  -- use({ 'tzachar/cmp-tabnine', run = './install.sh' })
-  -- use({ 'github/copilot.vim' })
-  -- use({
-  --   'zbirenbaum/copilot.lua',
-  --   event = { 'VimEnter' },
-  --   config = function()
-  --     vim.defer_fn(function()
-  --       require('copilot').setup()
-  --     end, 100)
-  --   end,
-  -- })
-  -- use({ 'zbirenbaum/copilot-cmp', module = 'copilot_cmp' })
 
   -- Syntax
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
@@ -89,15 +77,10 @@ return require('packer').startup(function(use)
   use('nvim-lua/popup.nvim')
 
   -- Tabline
-  -- use('romgrk/barbar.nvim')
   use('kdheepak/tabline.nvim')
 
   -- Statusline
-  -- use { 'glepnir/galaxyline.nvim', branch = 'main' }
   use('nvim-lualine/lualine.nvim')
-
-  -- Indent
-  -- use('lukas-reineke/indent-blankline.nvim')
 
   -- File explorer
   use('kyazdani42/nvim-tree.lua')
