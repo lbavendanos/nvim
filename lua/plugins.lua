@@ -69,7 +69,6 @@ return require('packer').startup(function(use)
   use('bluz71/vim-moonfly-colors')
 
   -- Icons
-  use('ryanoasis/vim-devicons')
   use('kyazdani42/nvim-web-devicons')
 
   -- Lua Development
