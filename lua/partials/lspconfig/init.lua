@@ -1,9 +1,24 @@
 local config = {}
 
+local lsp_formatting = function(bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      -- apply whatever logic you want (in this example, we'll only use null-ls)
+      return client.name == 'null-ls'
+    end,
+    async = true,
+    bufnr = bufnr,
+  })
+end
+
+-- if you want to set up formatting on save, you can use this as a callback
+local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+
 function config.on_attach(client, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
+
   local function buf_set_option(...)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end
@@ -15,6 +30,7 @@ function config.on_attach(client, bufnr)
 
   -- Mappings.
   local opts = { noremap = true, silent = true }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
   buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -38,27 +54,44 @@ function config.on_attach(client, bufnr)
   buf_set_keymap('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
   -- buf_set_keymap('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
 
+  vim.keymap.set('n', '<leader>f', lsp_formatting, bufopts)
+
+  -- if client.supports_method('textDocument/formatting') then
+  --   vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+  --   vim.api.nvim_create_autocmd('BufWritePre', {
+  --     group = augroup,
+  --     buffer = bufnr,
+  --     callback = function()
+  --       lsp_formatting(bufnr)
+  --     end,
+  --   })
+  -- end
+
   -- Set some keybinds conditional on server capabilities
-  if client.resolved_capabilities.document_formatting then
-    buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
-  end
-  if client.resolved_capabilities.document_range_formatting then
-    buf_set_keymap('v', '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
-  end
+  -- if client.resolved_capabilities.document_formatting then
+  --   vim.keymap.set('n', '<leader>f', function()
+  --     vim.lsp.buf.format({ async = true })
+  --   end, bufopts)
+  -- end
+  -- if client.resolved_capabilities.document_range_formatting then
+  --   vim.keymap.set('v', '<leader>f', function()
+  --     vim.lsp.buf.format({ async = true })
+  --   end, bufopts)
+  -- end
 
   -- Set autocommands conditional on server_capabilities
-  if client.resolved_capabilities.document_highlight then
-    vim.cmd([[
-      hi LspReferenceRead cterm=bold ctermbg=red guibg=#2e2e2e
-      hi LspReferenceText cterm=bold ctermbg=red guibg=#2e2e2e
-      hi LspReferenceWrite cterm=bold ctermbg=red guibg=#2e2e2e
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]])
-  end
+  -- if client.resolved_capabilities.document_highlight then
+  --   vim.cmd([[
+  --     hi LspReferenceRead cterm=bold ctermbg=red guibg=#2e2e2e
+  --     hi LspReferenceText cterm=bold ctermbg=red guibg=#2e2e2e
+  --     hi LspReferenceWrite cterm=bold ctermbg=red guibg=#2e2e2e
+  --     augroup lsp_document_highlight
+  --       autocmd! * <buffer>
+  --       autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+  --       autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+  --     augroup END
+  --   ]])
+  -- end
 end
 
 return config
