@@ -34,4 +34,5 @@ opt.colorcolumn = '99999' -- Hack to remove Blank lines in indentline
 opt.signcolumn = 'yes' -- Always show the signcolumn, otherwise it would shift the text each time
 opt.updatetime = 300 -- Faster completion
 opt.clipboard = 'unnamedplus' -- Copy paste between vim and everything else
+opt.mouse = ''
 cmd('set grepprg=rg\\ --vimgrep')
