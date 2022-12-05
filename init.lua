@@ -1,6 +1,6 @@
 -- General
 require('plugins')
-require('settings')
+require('options')
 require('mappings')
 
 -- Themes
