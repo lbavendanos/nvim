@@ -36,3 +36,4 @@ opt.updatetime = 300 -- Faster completion
 opt.clipboard = 'unnamedplus' -- Copy paste between vim and everything else
 opt.mouse = ''
 opt.grepprg = 'rg --vimgrep'
+opt.termguicolors = true
