@@ -18,11 +18,12 @@ require('catppuccin').setup({
     end,
     mocha = function(c)
       return {
-        TabLineSel = { bg = c.pink },
-        NvimTreeNormal = { bg = c.none },
+        NormalFloat = { bg = c.none },
         CmpBorder = { fg = c.surface2 },
         Pmenu = { bg = c.none },
-        NormalFloat = { bg = c.none },
+        TabLineSel = { bg = c.pink },
+        NvimTreeNormal = { bg = c.none },
+        NvimTreeVertSplit = { fg = c.crust },
         TelescopeBorder = { link = 'FloatBorder' },
       }
     end,
