@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
   use({ 'catppuccin/nvim', as = 'catppuccin' })
 
   -- Icons
-  use('kyazdani42/nvim-web-devicons')
+  use('nvim-tree/nvim-web-devicons')
 
   -- Lua Development
   use('nvim-lua/plenary.nvim')
@@ -77,7 +77,7 @@ return require('packer').startup(function(use)
   use('nvim-lualine/lualine.nvim')
 
   -- File explorer
-  use('kyazdani42/nvim-tree.lua')
+  use('nvim-tree/nvim-tree.lua')
 
   -- Git
   use('tpope/vim-fugitive')

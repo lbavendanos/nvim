@@ -1,9 +1,14 @@
-vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true })
+local ok, tree = pcall(require, 'nvim-tree')
 
-require('nvim-tree').setup({
-  disable_netrw = false,
+if not ok then
+  return
+end
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+tree.setup({
   hijack_netrw = false,
-  hijack_cursor = false,
   update_focused_file = { enable = true },
   view = { width = 40 },
   renderer = {
@@ -21,9 +26,11 @@ require('nvim-tree').setup({
     },
   },
   filters = {
-    custom = { '.git' },
+    custom = { '^.git$' },
   },
   git = {
     ignore = false,
   },
 })
+
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true })

@@ -1,7 +1,6 @@
 require('partials.lualine')
 require('partials.tabline')
 require('partials.telescope')
-require('partials.tree')
 require('partials.treesitter')
 require('partials.colorizer')
 require('partials.lspsaga')
