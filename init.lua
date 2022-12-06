@@ -3,7 +3,7 @@ pcall(require, 'impatient')
 -- General
 require('plugins')
 require('core.options')
-require('mappings')
+require('core.mappings')
 
 -- Theme
 require('core.theme')
