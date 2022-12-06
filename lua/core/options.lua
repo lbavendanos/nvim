@@ -1,3 +1,6 @@
+vim.cmd('syntax on') -- Enables syntax highlighing
+vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
+
 local options = {
   compatible = false,
   hidden = true, -- Required to keep multiple buffers open multiple buffers
@@ -38,6 +41,3 @@ local options = {
 for key, value in pairs(options) do
   vim.opt[key] = value
 end
-
-vim.cmd('syntax on') -- Enables syntax highlighing
-vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.

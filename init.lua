@@ -1,10 +1,10 @@
 -- General
 require('plugins')
-require('options')
+require('core.options')
 require('mappings')
 
--- Themes
-require('themes')
+-- Theme
+require('core.theme')
 
 -- Partials
 require('partials')
