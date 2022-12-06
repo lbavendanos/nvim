@@ -21,7 +21,8 @@ end
 
 require('lualine').setup({
   options = {
-    theme = custom_theme,
+    theme = 'catppuccin',
+    -- theme = custom_theme,
   },
   sections = {
     lualine_a = { icon },

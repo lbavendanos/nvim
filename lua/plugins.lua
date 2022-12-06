@@ -59,8 +59,7 @@ return require('packer').startup(function(use)
   use('norcalli/nvim-colorizer.lua')
 
   -- Colorscheme
-  use('bluz71/vim-nightfly-guicolors')
-  use('bluz71/vim-moonfly-colors')
+  use({ 'catppuccin/nvim', as = 'catppuccin' })
 
   -- Icons
   use('kyazdani42/nvim-web-devicons')
