@@ -1,5 +1,10 @@
-local custom_theme = require('partials.lualine.themes.custom')
-local default_config = require('lualine').get_config()
+local ok, lualine = pcall(require, 'lualine')
+
+if not ok then
+  return
+end
+
+local default_config = lualine.get_config()
 local colors = require('utils.colors')
 local lualine_c = {
   'branch',
@@ -19,10 +24,9 @@ local function icon()
   return ' '
 end
 
-require('lualine').setup({
+lualine.setup({
   options = {
     theme = 'catppuccin',
-    -- theme = custom_theme,
   },
   sections = {
     lualine_a = { icon },

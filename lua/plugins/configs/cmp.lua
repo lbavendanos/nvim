@@ -1,4 +1,9 @@
-local cmp = require('cmp')
+local ok, cmp = pcall(require, 'cmp')
+
+if not ok then
+  return
+end
+
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local lspkind = require('lspkind')
 

@@ -1,16 +1,17 @@
 pcall(require, 'impatient')
 
--- General
+-- Plugin
 require('plugins')
+
+-- Core
 require('core.options')
 require('core.mappings')
 
--- Theme
-require('core.theme')
-
--- Partials
-require('partials')
-require('core.plugins')
+-- Setup plugins
+require('plugins.configs')
 
 -- LSP
 require('lsp')
+
+-- Theme
+require('core.theme')

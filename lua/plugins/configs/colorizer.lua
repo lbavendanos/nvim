@@ -1,4 +1,10 @@
-require('colorizer').setup({ '*' }, {
+local ok, colorizer = pcall(require, 'colorizer')
+
+if not ok then
+  return
+end
+
+colorizer.setup({ '*' }, {
   RGB = true, -- #RGB hex codes
   RRGGBB = true, -- #RRGGBB hex codes
   names = true, -- "Name" codes like Blue
