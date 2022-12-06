@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
+  use('lewis6991/impatient.nvim')
+
   -- LSP
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')

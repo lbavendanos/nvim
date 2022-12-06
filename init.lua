@@ -1,3 +1,5 @@
+pcall(require, 'impatient')
+
 -- General
 require('plugins')
 require('core.options')
