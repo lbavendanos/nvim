@@ -5,19 +5,11 @@ if not ok then
   return
 end
 
-local default_config = lualine.get_config()
-local colors = require('utils.colors')
+local config = lualine.get_config()
 local lualine_c = {
   'branch',
-  {
-    'diff',
-    diff_color = {
-      added = { fg = colors.green },
-      modified = { fg = colors.purple },
-      removed = { fg = colors.red },
-    },
-  },
-  { 'diagnostics', sources = { 'nvim_diagnostic', 'coc' } },
+  'diff',
+  'diagnostics',
   'filename',
 }
 
@@ -31,7 +23,7 @@ lualine.setup({
   },
   sections = {
     lualine_a = { icon },
-    lualine_b = default_config.sections.lualine_a,
+    lualine_b = config.sections.lualine_a,
     lualine_c = lualine_c,
   },
   extensions = { 'quickfix', 'nvim-tree', 'fugitive' },
