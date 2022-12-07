@@ -1,6 +1,7 @@
 local ok, tree = pcall(require, 'nvim-tree')
 
 if not ok then
+  print('nvim-tree is not installed')
   return
 end
 

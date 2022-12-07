@@ -1,6 +1,7 @@
 local ok, todo_comments = pcall(require, 'todo-comments')
 
 if not ok then
+  print('todo-comments is not installed')
   return
 end
 

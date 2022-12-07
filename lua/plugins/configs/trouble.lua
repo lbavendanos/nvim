@@ -1,6 +1,7 @@
 local ok, trouble = pcall(require, 'trouble')
 
 if not ok then
+  print('trouble is not installed')
   return
 end
 

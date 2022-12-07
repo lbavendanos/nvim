@@ -1,6 +1,7 @@
 local ok, telescope = pcall(require, 'telescope')
 
 if not ok then
+  print('telescope is not installed')
   return
 end
 
@@ -32,12 +33,7 @@ telescope.load_extension('live_grep_args')
 local options = { noremap = true, silent = true }
 
 vim.keymap.set('n', '<leader>p', '<cmd>lua require("telescope.builtin").find_files()<CR>', options)
-vim.keymap.set(
-  'n',
-  '<leader>P',
-  '<cmd>lua require "telescope".extensions.file_browser.file_browser()<CR>',
-  options
-)
+vim.keymap.set('n', '<leader>P', '<cmd>lua require "telescope".extensions.file_browser.file_browser()<CR>', options)
 -- vim.keymap.set('n', '<leader>o', '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
 vim.keymap.set(
   'n',
