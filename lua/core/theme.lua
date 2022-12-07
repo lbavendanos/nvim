@@ -2,6 +2,8 @@ require('catppuccin').setup({
   flavour = 'mocha', -- latte, frappe, macchiato, mocha
   term_colors = true,
   transparent_background = false,
+  no_italic = false, -- Force no italic
+  no_bold = false, -- Force no bold
   color_overrides = {
     latte = {
       base = '#e1eef5',
