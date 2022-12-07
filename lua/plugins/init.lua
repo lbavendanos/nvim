@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
   -- LSP
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
-  use('tami5/lspsaga.nvim')
+  use({ 'glepnir/lspsaga.nvim', branch = 'main' })
   use('ray-x/lsp_signature.nvim')
   use('onsails/lspkind-nvim')
   use('folke/lsp-colors.nvim')

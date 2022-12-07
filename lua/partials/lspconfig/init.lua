@@ -29,32 +29,30 @@ function config.on_attach(client, bufnr)
   -- vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signatureHelp, { border = 'single' })
 
   -- Mappings.
-  local opts = { noremap = true, silent = true }
-  local bufopts = { noremap = true, silent = true, buffer = bufnr }
+  local options = { noremap = true, silent = true }
+  local bufoptions = { noremap = true, silent = true, buffer = bufnr }
 
-  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', '<leader>k', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', options)
+  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', options)
+  buf_set_keymap('n', '<leader>k', '<cmd>lua vim.lsp.buf.signature_help()<CR>', options)
   -- buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<leader>i', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-  buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+  buf_set_keymap('n', '<leader>i', '<cmd>lua vim.diagnostic.open_float()<CR>', options)
+  buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', options)
+  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', options)
+  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', options)
 
   -- Telescope keybinds
-  buf_set_keymap('n', 'gd', '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua require("telescope.builtin").lsp_implementations()<CR>', opts)
-  buf_set_keymap('n', '<leader>D', '<cmd>lua require("telescope.builtin").lsp_type_definitions()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', options)
+  buf_set_keymap('n', 'gi', '<cmd>lua require("telescope.builtin").lsp_implementations()<CR>', options)
+  buf_set_keymap('n', '<leader>D', '<cmd>lua require("telescope.builtin").lsp_type_definitions()<CR>', options)
+  buf_set_keymap('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references()<CR>', options)
   -- buf_set_keymap('n', '<leader>ca', '<cmd>lua require("telescope.builtin").lsp_code_actions()<CR>', opts)
-  buf_set_keymap('n', '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
+  buf_set_keymap('n', '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>', options)
 
   -- Saga keybinds
-  buf_set_keymap('n', 'gp', '<cmd>Lspsaga preview_definition<CR>', opts)
-  buf_set_keymap('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
-  -- buf_set_keymap('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
+  buf_set_keymap('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', options)
 
-  vim.keymap.set('n', '<leader>f', lsp_formatting, bufopts)
+  vim.keymap.set('n', '<leader>f', lsp_formatting, bufoptions)
 
   -- if client.supports_method('textDocument/formatting') then
   --   vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
