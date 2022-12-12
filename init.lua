@@ -10,8 +10,5 @@ require('core.mappings')
 -- Setup plugins
 require('plugins.configs')
 
--- LSP
-require('lsp')
-
 -- Theme
 require('core.theme')
