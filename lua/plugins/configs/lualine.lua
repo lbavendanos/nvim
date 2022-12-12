@@ -18,9 +18,6 @@ local function icon()
 end
 
 lualine.setup({
-  options = {
-    theme = 'catppuccin',
-  },
   sections = {
     lualine_a = { icon },
     lualine_b = config.sections.lualine_a,
