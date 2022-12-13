@@ -35,12 +35,13 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', ']d', vim.diagnostic.goto_next, bufopts)
 
   -- Telescope keybinds
-  vim.keymap.set('n', 'gd', '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', bufopts)
-  vim.keymap.set('n', 'gi', '<cmd>lua require("telescope.builtin").lsp_implementations()<CR>', bufopts)
-  vim.keymap.set('n', '<leader>D', '<cmd>lua require("telescope.builtin").lsp_type_definitions()<CR>', bufopts)
-  vim.keymap.set('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references()<CR>', bufopts)
-  -- vim.keymap.set('n', '<leader>ca', '<cmd>lua require("telescope.builtin").lsp_code_actions()<CR>', opts)
-  vim.keymap.set('n', '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>', bufopts)
+  local builtin = require('telescope.builtin')
+
+  vim.keymap.set('n', 'gd', builtin.lsp_definitions, bufopts)
+  vim.keymap.set('n', 'gi', builtin.lsp_implementations, bufopts)
+  vim.keymap.set('n', '<leader>D', builtin.lsp_type_definitions, bufopts)
+  vim.keymap.set('n', 'gr', builtin.lsp_references, bufopts)
+  vim.keymap.set('n', '<leader>d', builtin.diagnostics, bufopts)
 
   -- Saga keybinds
   vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', bufopts)
