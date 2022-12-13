@@ -17,6 +17,7 @@ local plugins = {
   'comment',
   'todocomments',
   'autopairs',
+  'mason',
   'lsp',
   'theme',
 }
