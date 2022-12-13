@@ -18,6 +18,7 @@ local plugins = {
   'todocomments',
   'autopairs',
   'lsp',
+  'theme',
 }
 
 for _, value in pairs(plugins) do

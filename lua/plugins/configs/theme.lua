@@ -1,4 +1,11 @@
-require('catppuccin').setup({
+local ok, theme = pcall(require, 'catppuccin')
+
+if not ok then
+  print('theme is not installed')
+  return
+end
+
+theme.setup({
   flavour = 'mocha', -- latte, frappe, macchiato, mocha
   term_colors = true,
   transparent_background = false,
