@@ -1,7 +1,10 @@
 local plugins = {
+  'theme',
   'tree',
-  'lualine',
-  'tabline',
+  -- 'lualine',
+  -- 'tabline',
+  'tabby',
+  'feline',
   'telescope',
   'treesitter',
   'colorizer',
@@ -15,11 +18,10 @@ local plugins = {
   'diffview',
   'maximizer',
   'comment',
-  'todocomments',
+  -- 'todocomments',
   'autopairs',
   'mason',
   'lsp',
-  'theme',
 }
 
 for _, value in pairs(plugins) do

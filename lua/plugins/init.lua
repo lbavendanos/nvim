@@ -66,6 +66,8 @@ return require('packer').startup(function(use)
 
   -- Colorscheme
   use({ 'catppuccin/nvim', as = 'catppuccin' })
+  use('EdenEast/nightfox.nvim')
+  use('rebelot/kanagawa.nvim')
 
   -- Icons
   use('nvim-tree/nvim-web-devicons')
@@ -76,9 +78,11 @@ return require('packer').startup(function(use)
 
   -- Tabline
   use('kdheepak/tabline.nvim')
+  use('nanozuki/tabby.nvim')
 
   -- Statusline
   use('nvim-lualine/lualine.nvim')
+  use('feline-nvim/feline.nvim')
 
   -- File explorer
   use('nvim-tree/nvim-tree.lua')
