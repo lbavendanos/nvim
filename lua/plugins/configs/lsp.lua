@@ -72,10 +72,6 @@ lspconfig.vimls.setup({
   capabilities = capabilities,
 })
 
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, 'lua/?.lua')
-table.insert(runtime_path, 'lua/?/init.lua')
-
 lspconfig.sumneko_lua.setup({
   on_attach = on_attach,
   capabilities = capabilities,
@@ -84,8 +80,6 @@ lspconfig.sumneko_lua.setup({
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
         version = 'LuaJIT',
-        -- Setup your lua path
-        path = runtime_path,
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
@@ -134,42 +128,12 @@ lspconfig.cssls.setup({
   capabilities = capabilities,
 })
 
-local configs = require('lspconfig.configs')
-
-configs.emmet_ls = {
-  default_config = {
-    -- cmd = { 'emmet-ls', '--stdio' },
-    cmd = { 'ls_emmet', '--stdio' },
-    filetypes = {
-      'html',
-      'css',
-      'scss',
-      'javascript',
-      'javascript.jsx',
-      'javascriptreact',
-      'typescript',
-      'typescript.tsx',
-      'typescriptreact',
-      'haml',
-      'xml',
-      'xsl',
-      'pug',
-      'slim',
-      'sass',
-      'stylus',
-      'less',
-      'sss',
-      'vue',
-    },
-    -- filetypes = { 'html', 'css' },
-    root_dir = function()
-      return vim.loop.cwd()
-    end,
-    settings = {},
-  },
-}
-
 lspconfig.emmet_ls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
+lspconfig.tailwindcss.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })

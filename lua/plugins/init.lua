@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
   -- LSP
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
+  use('jay-babu/mason-null-ls.nvim')
   use({ 'glepnir/lspsaga.nvim', branch = 'main' })
   use('ray-x/lsp_signature.nvim')
   use('onsails/lspkind-nvim')
