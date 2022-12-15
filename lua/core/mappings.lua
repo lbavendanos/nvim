@@ -31,6 +31,10 @@ vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l', options)
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', options)
 vim.keymap.set('n', '<C-\\>', '<C-w>w', options)
 
+-- Buffer navigation
+vim.keymap.set('n', '[b', ':bnext<CR>', options)
+vim.keymap.set('n', ']b', ':bprev<CR>', options)
+
 -- Resize
 vim.keymap.set('n', '<leader><Up>', ':resize -5<CR>', options)
 vim.keymap.set('n', '<leader><Down>', ':resize +5<CR>', options)
