@@ -107,7 +107,7 @@ return require('packer').startup(function(use)
 
   -- Others
   use('szw/vim-maximizer')
-  use('moll/vim-bbye')
+  use('famiu/bufdelete.nvim')
   use({
     'kkoomen/vim-doge',
     run = ':call doge#install()',

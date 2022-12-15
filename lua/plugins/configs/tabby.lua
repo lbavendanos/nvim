@@ -65,7 +65,7 @@ local cwd = function()
   return '  ' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':t') .. ' '
 end
 
-local line = {
+local tabline = {
   hl = 'TabLineFill',
   layout = 'active_wins_at_tail',
   head = {
@@ -119,5 +119,5 @@ local line = {
 }
 
 tabby.setup({
-  tabline = line,
+  tabline = tabline,
 })
