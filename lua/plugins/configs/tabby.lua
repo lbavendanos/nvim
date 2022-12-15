@@ -59,10 +59,23 @@ vim.api.nvim_create_autocmd({ 'SessionLoadPost', 'ColorScheme' }, {
 ----------------------------------------------------------------------------------------------------
 -- Tabby
 
+local tab_name = require('tabby.feature.tab_name')
 local filename = require('tabby.module.filename')
+
+local default_option = {
+  name_fallback = function()
+    return nil
+  end,
+}
 
 local cwd = function()
   return '  ' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':t') .. ' '
+end
+
+local function get_tab_label(tabid)
+  local tabname = tab_name.get(tabid, default_option)
+
+  return tabname ~= nil and tabname or tabid
 end
 
 local tabline = {
@@ -74,8 +87,10 @@ local tabline = {
   },
   active_tab = {
     label = function(tabid)
+      local tablabel = get_tab_label(tabid)
+
       return {
-        '  ' .. tabid .. ' ',
+        '  ' .. tablabel .. ' ',
         hl = 'UserTLActive',
       }
     end,
@@ -84,8 +99,10 @@ local tabline = {
   },
   inactive_tab = {
     label = function(tabid)
+      local tablabel = get_tab_label(tabid)
+
       return {
-        '  ' .. tabid .. ' ',
+        '  ' .. tablabel .. ' ',
         hl = 'UserTLBoldLine',
       }
     end,
@@ -121,3 +138,17 @@ local tabline = {
 tabby.setup({
   tabline = tabline,
 })
+
+local options = { noremap = true, silent = true }
+
+vim.keymap.set('n', '<leader>t', ':$tabnew<CR>', options)
+vim.keymap.set('n', '<leader>x', ':tabclose<CR>', options)
+-- vim.keymap.set('n', '<leader>to', ':tabonly<CR>', options)
+vim.keymap.set('n', '<TAB>', ':tabn<CR>', options)
+vim.keymap.set('n', '<S-TAB>', ':tabp<CR>', options)
+
+-- move current tab to previous position
+-- vim.keymap.set('n', '<leader>tmp', ':-tabmove<CR>', options)
+
+-- move current tab to next position
+-- vim.keymap.set('n', '<leader>tmn', ':+tabmove<CR>', options)
