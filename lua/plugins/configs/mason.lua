@@ -33,5 +33,9 @@ mason_lspconfig.setup({
 })
 
 mason_null_ls.setup({
-  ensure_installed = { 'stylua', 'eslint_d', 'prettierd', 'phpcsfixer' },
+  ensure_installed = {
+    'stylua',
+    'eslint_d',
+    'prettierd',
+  },
 })

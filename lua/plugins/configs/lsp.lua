@@ -1,16 +1,32 @@
-local ok, lspconfig = pcall(require, 'lspconfig')
+local lspconfig_status, lspconfig = pcall(require, 'lspconfig')
+local null_ls_status, null_ls = pcall(require, 'null-ls')
 
-if not ok then
+if not lspconfig_status then
   print('lspconfig is not installed')
   return
 end
 
-local lsp_formatting = function(bufnr)
+if not null_ls_status then
+  print('null-ll is not installed')
+  return
+end
+
+local lsp_format_filter = function(client)
+  local filetype = vim.bo.filetype
+  local sources = require('null-ls.sources')
+  local method = null_ls.methods.FORMATTING
+  local available_formatters = sources.get_available(filetype, method)
+
+  if #available_formatters > 0 then
+    return client.name == 'null-ls'
+  end
+
+  return client.supports_method('textDocument/formatting')
+end
+
+local lsp_format = function(bufnr)
   vim.lsp.buf.format({
-    filter = function(client)
-      -- apply whatever logic you want (in this example, we'll only use null-ls)
-      return client.name == 'null-ls'
-    end,
+    filter = lsp_format_filter,
     async = true,
     bufnr = bufnr,
   })
@@ -46,18 +62,15 @@ local on_attach = function(_, bufnr)
   -- Saga keybinds
   vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', bufopts)
 
-  vim.keymap.set('n', '<leader>f', lsp_formatting, bufopts)
+  vim.keymap.set('n', '<leader>f', lsp_format, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-local null_ls = require('null-ls')
 
 local sources = {
   null_ls.builtins.formatting.stylua,
   null_ls.builtins.diagnostics.eslint_d,
   null_ls.builtins.formatting.prettierd,
-  null_ls.builtins.formatting.phpcsfixer,
 }
 
 null_ls.setup({
@@ -104,9 +117,9 @@ lspconfig.intelephense.setup({
 
 lspconfig.tsserver.setup({
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-
     client.server_capabilities.documentFormattingProvider = false
+
+    on_attach(client, bufnr)
   end,
   capabilities = capabilities,
 })
