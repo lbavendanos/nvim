@@ -65,7 +65,7 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<leader>f', lsp_format, bufopts)
 end
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local sources = {
   null_ls.builtins.formatting.stylua,
