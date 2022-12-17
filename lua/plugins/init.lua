@@ -19,11 +19,11 @@ return require('packer').startup(function(use)
   -- LSP Installer
   use('williamboman/mason.nvim')
   use('williamboman/mason-lspconfig.nvim')
+  use('jay-babu/mason-null-ls.nvim')
 
   -- LSP
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
-  use('jay-babu/mason-null-ls.nvim')
   use({ 'glepnir/lspsaga.nvim', branch = 'main' })
   use('ray-x/lsp_signature.nvim')
   use('onsails/lspkind-nvim')
@@ -94,8 +94,8 @@ return require('packer').startup(function(use)
   use('sindrets/diffview.nvim')
 
   -- Comment
-  use('terrortylor/nvim-comment')
   use('JoosepAlviste/nvim-ts-context-commentstring')
+  use('numToStr/Comment.nvim')
   use('folke/todo-comments.nvim')
 
   -- Editing supports

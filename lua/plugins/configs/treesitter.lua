@@ -15,7 +15,7 @@ treesitter.setup({
   indent = { enable = true },
   autotag = { enable = true },
   rainbow = { enable = true, extended_mode = false },
-  context_commentstring = { enable = true },
+  context_commentstring = { enable = true, enable_autocmd = false },
   playground = {
     enable = true,
     disable = {},
