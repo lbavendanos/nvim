@@ -24,6 +24,7 @@ mason_lspconfig.setup({
     'vimls',
     'intelephense',
     'tsserver',
+    'svelte',
     'jsonls',
     'html',
     'cssls',
