@@ -29,7 +29,6 @@ return require('packer').startup(function(use)
   use('onsails/lspkind-nvim')
   use('folke/lsp-colors.nvim')
   use('folke/trouble.nvim')
-  use('akinsho/flutter-tools.nvim')
 
   -- Completion
   use({
