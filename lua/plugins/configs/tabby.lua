@@ -138,17 +138,3 @@ local tabline = {
 tabby.setup({
   tabline = tabline,
 })
-
-local options = { noremap = true, silent = true }
-
-vim.keymap.set('n', '<leader>t', ':$tabnew<CR>', options)
-vim.keymap.set('n', '<leader>x', ':tabclose<CR>', options)
--- vim.keymap.set('n', '<leader>to', ':tabonly<CR>', options)
-vim.keymap.set('n', '<Right>', ':tabn<CR>', options)
-vim.keymap.set('n', '<Left>', ':tabp<CR>', options)
-
--- move current tab to previous position
--- vim.keymap.set('n', '<leader>tmp', ':-tabmove<CR>', options)
-
--- move current tab to next position
--- vim.keymap.set('n', '<leader>tmn', ':+tabmove<CR>', options)

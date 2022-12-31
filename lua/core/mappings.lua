@@ -35,6 +35,12 @@ vim.keymap.set('n', '<C-\\>', '<C-w>w', options)
 vim.keymap.set('n', '<TAB>', ':bnext<CR>', options)
 vim.keymap.set('n', '<S-TAB>', ':bprev<CR>', options)
 
+-- Tab navigation
+vim.keymap.set('n', '<leader>t', ':$tabnew<CR>', options)
+vim.keymap.set('n', '<leader>x', ':tabclose<CR>', options)
+vim.keymap.set('n', '<Right>', ':tabn<CR>', options)
+vim.keymap.set('n', '<Left>', ':tabp<CR>', options)
+
 -- Resize
 vim.keymap.set('n', '<leader><Up>', ':resize -5<CR>', options)
 vim.keymap.set('n', '<leader><Down>', ':resize +5<CR>', options)

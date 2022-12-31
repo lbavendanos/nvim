@@ -1,10 +1,10 @@
 local plugins = {
   'theme',
   'tree',
-  'feline',
-  'tabby',
   -- 'lualine',
-  -- 'tabline',
+  'tabline',
+  'feline',
+  -- 'tabby',
   'bufdelete',
   'telescope',
   'treesitter',

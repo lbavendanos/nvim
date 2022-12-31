@@ -12,6 +12,8 @@ if not ok then
   return
 end
 
+local dc = require('kanagawa.colors').setup()
+
 local configs = {
   catppuccin = {
     flavour = 'mocha', -- latte, frappe, macchiato, mocha
@@ -59,6 +61,9 @@ local configs = {
       Normal = { bg = 'NONE' },
       NvimTreeNormal = { bg = 'NONE' },
       TelescopeBorder = { bg = 'NONE' },
+      tabline_a_normal = { bg = dc.waveAqua2, fg = dc.sumiInk0 },
+      tabline_b_normal = { bg = dc.sumiInk0, fg = dc.waveAqua2 },
+      tabline_c_normal = { bg = dc.sumiInk0, fg = dc.waveAqua2 },
     },
   },
 }
