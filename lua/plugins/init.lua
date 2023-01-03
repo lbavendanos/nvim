@@ -110,6 +110,6 @@ return require('packer').startup(function(use)
   use({ 'yardnsm/vim-import-cost', run = 'npm install --production' })
   use({
     'kkoomen/vim-doge',
-    run = ':call doge#install()',
+    run = 'npm i --no-save && npm run build:binary:unix',
   })
 end)
