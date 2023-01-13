@@ -5,7 +5,11 @@ if not ok then
   return
 end
 
-lspsaga.init_lsp_saga({
-  code_action_keys = { quit = '<Escape>', exec = '<CR>' },
-  rename_in_select = false,
+lspsaga.setup({
+  symbol_in_winbar = {
+    separator = '  ',
+  },
+  rename = {
+    in_select = false,
+  },
 })
