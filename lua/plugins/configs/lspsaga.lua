@@ -11,6 +11,5 @@ lspsaga.setup({
   },
   rename = {
     in_select = false,
-    whole_project = false,
   },
 })
