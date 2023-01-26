@@ -129,6 +129,11 @@ lspconfig.svelte.setup({
   capabilities = capabilities,
 })
 
+lspconfig.astro.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lspconfig.jsonls.setup({

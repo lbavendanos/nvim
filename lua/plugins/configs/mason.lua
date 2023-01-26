@@ -25,6 +25,7 @@ mason_lspconfig.setup({
     'intelephense',
     'tsserver',
     'svelte',
+    'astro',
     'jsonls',
     'html',
     'cssls',
