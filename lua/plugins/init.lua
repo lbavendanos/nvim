@@ -1,39 +1,37 @@
-local execute = vim.api.nvim_command
-local fn = vim.fn
-
-local install_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
-
-if fn.empty(fn.glob(install_path)) > 0 then
-  execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
-  execute('packadd packer.nvim')
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
-
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use('wbthomason/packer.nvim')
-
-  use('lewis6991/impatient.nvim')
+require('lazy').setup({
+  'lewis6991/impatient.nvim',
 
   -- LSP Installer
-  use('williamboman/mason.nvim')
-  use('williamboman/mason-lspconfig.nvim')
-  use('jay-babu/mason-null-ls.nvim')
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  'jay-babu/mason-null-ls.nvim',
 
   -- LSP
-  use('neovim/nvim-lspconfig')
-  use('jose-elias-alvarez/null-ls.nvim')
-  use({ 'glepnir/lspsaga.nvim', branch = 'main' })
-  use('ray-x/lsp_signature.nvim')
-  use('onsails/lspkind-nvim')
-  use('folke/lsp-colors.nvim')
-  use('folke/trouble.nvim')
+  'neovim/nvim-lspconfig',
+  'jose-elias-alvarez/null-ls.nvim',
+  { 'glepnir/lspsaga.nvim', branch = 'main' },
+  'ray-x/lsp_signature.nvim',
+  'onsails/lspkind-nvim',
+  'folke/lsp-colors.nvim',
+  'folke/trouble.nvim',
 
   -- Completion
-  use({
+  {
     'hrsh7th/nvim-cmp',
-    requires = {
+    dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lua',
@@ -43,73 +41,74 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-emoji',
       'hrsh7th/cmp-cmdline',
     },
-  })
+  },
 
   -- Syntax
-  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
   -- Snippets
-  use('L3MON4D3/LuaSnip')
-  use('rafamadriz/friendly-snippets')
-  use('burkeholland/simple-react-snippets')
+  'L3MON4D3/LuaSnip',
+  'rafamadriz/friendly-snippets',
+  'burkeholland/simple-react-snippets',
 
   -- Fuzzy Finder
-  use('nvim-telescope/telescope.nvim')
-  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
-  use({ 'nvim-telescope/telescope-file-browser.nvim' })
-  use({ 'nvim-telescope/telescope-ui-select.nvim' })
-  use({ 'nvim-telescope/telescope-live-grep-args.nvim' })
+  'nvim-telescope/telescope.nvim',
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  'nvim-telescope/telescope-file-browser.nvim',
+  'nvim-telescope/telescope-ui-select.nvim',
+  'nvim-telescope/telescope-live-grep-args.nvim',
 
   -- Colors
-  use('norcalli/nvim-colorizer.lua')
+  'norcalli/nvim-colorizer.lua',
 
   -- Colorscheme
-  use({ 'catppuccin/nvim', as = 'catppuccin' })
-  use('EdenEast/nightfox.nvim')
-  use('rebelot/kanagawa.nvim')
+  { 'catppuccin/nvim', name = 'catppuccin' },
+  'EdenEast/nightfox.nvim',
+  'rebelot/kanagawa.nvim',
 
   -- Icons
-  use('nvim-tree/nvim-web-devicons')
+  'nvim-tree/nvim-web-devicons',
 
   -- Lua Development
-  use('nvim-lua/plenary.nvim')
-  use('nvim-lua/popup.nvim')
+  'nvim-lua/plenary.nvim',
+  'nvim-lua/popup.nvim',
 
   -- Tabline
-  use('kdheepak/tabline.nvim')
-  use('nanozuki/tabby.nvim')
+  'kdheepak/tabline.nvim',
+  'nanozuki/tabby.nvim',
 
   -- Statusline
-  use('nvim-lualine/lualine.nvim')
-  use('feline-nvim/feline.nvim')
+  'nvim-lualine/lualine.nvim',
+  'feline-nvim/feline.nvim',
 
   -- File explorer
-  use('nvim-tree/nvim-tree.lua')
+  'nvim-tree/nvim-tree.lua',
 
   -- Git
-  use('tpope/vim-fugitive')
-  use('lewis6991/gitsigns.nvim')
-  use('sindrets/diffview.nvim')
+  'tpope/vim-fugitive',
+  'lewis6991/gitsigns.nvim',
+  'sindrets/diffview.nvim',
 
   -- Comment
-  use('JoosepAlviste/nvim-ts-context-commentstring')
-  use('numToStr/Comment.nvim')
-  use('folke/todo-comments.nvim')
+  'JoosepAlviste/nvim-ts-context-commentstring',
+  'numToStr/Comment.nvim',
+  'folke/todo-comments.nvim',
 
   -- Editing supports
-  use('windwp/nvim-ts-autotag')
-  use('p00f/nvim-ts-rainbow')
-  use('windwp/nvim-autopairs')
-  use('tpope/vim-surround')
-  use('editorconfig/editorconfig-vim')
-  use({ 'mg979/vim-visual-multi', branch = 'master' })
+  'windwp/nvim-ts-autotag',
+  'p00f/nvim-ts-rainbow',
+  'windwp/nvim-autopairs',
+  'tpope/vim-surround',
+  'editorconfig/editorconfig-vim',
+  { 'mg979/vim-visual-multi', branch = 'master' },
 
   -- Others
-  use('szw/vim-maximizer')
-  use('famiu/bufdelete.nvim')
-  use({ 'yardnsm/vim-import-cost', run = 'npm install --production' })
-  use({
+  'szw/vim-maximizer',
+  'famiu/bufdelete.nvim',
+  { 'yardnsm/vim-import-cost', build = 'npm install --production' },
+  {
     'kkoomen/vim-doge',
-    run = 'npm i --no-save && npm run build:binary:unix',
-  })
-end)
+    build = 'npm i --no-save && npm run build:binary:unix',
+  },
+})
+
