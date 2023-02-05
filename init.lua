@@ -1,8 +1,3 @@
-pcall(require, 'impatient')
-
--- Core
-require('core')
-
--- Plugins
-require('plugins')
-require('plugins.configs')
+require('core.options')
+require('core.mappings')
+require('core.lazy')
