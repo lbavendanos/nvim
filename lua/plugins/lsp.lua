@@ -3,9 +3,10 @@ return {
   dependencies = {
     'williamboman/mason.nvim',
     'jose-elias-alvarez/null-ls.nvim',
+    { 'folke/neoconf.nvim', cmd = 'Neoconf', config = true },
+    { 'ray-x/lsp_signature.nvim', config = { hi_parameter = 'IncSearch' } },
     'nvim-telescope/telescope.nvim',
     'glepnir/lspsaga.nvim',
-    { 'ray-x/lsp_signature.nvim', config = { hi_parameter = 'IncSearch' } },
     'folke/lsp-colors.nvim',
   },
   config = function()
