@@ -19,6 +19,10 @@ vim.keymap.set('n', '<leader>q', ':q<CR>', options)
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", options)
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", options)
 
+-- Jumps
+vim.keymap.set('n', '<C-i>', '<C-i>', options)
+vim.keymap.set('n', '<C-o>', '<C-o>', options)
+
 -- Windows navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h', options)
 vim.keymap.set('n', '<C-j>', '<C-w>j', options)
