@@ -10,29 +10,16 @@ return {
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
+    'roobert/tailwindcss-colorizer-cmp.nvim',
   },
-  config = function()
+  opts = function()
     local cmp = require('cmp')
     local lspkind = require('lspkind')
 
-    local source_mapping = {
-      copilot = '[Copilot]',
-      buffer = '[Buffer]',
-      nvim_lsp = '[LSP]',
-      nvim_lua = '[Lua]',
-      -- cmp_tabnine = '[TN]',
-      luasnip = '[LuaSnip]',
-      latex_symbols = '[Latex]',
-      path = '[Path]',
-      calc = '[Calc]',
-      emoji = '[Emoji]',
-    }
-
-    cmp.setup({
+    return {
       snippet = {
         expand = function(args)
-          -- For `luasnip` user.
-          require('luasnip').lsp_expand(args.body)
+          require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         end,
       },
       window = {
@@ -43,50 +30,29 @@ return {
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       }),
       sources = cmp.config.sources({
-        { name = 'copilot', group_index = 2 },
-        { name = 'buffer', group_index = 2 },
-        { name = 'nvim_lsp', group_index = 2 },
-        { name = 'nvim_lua', group_index = 2 },
-        -- { name = 'cmp_tabnine', group_index = 2 },
-        { name = 'luasnip', group_index = 2 },
-        { name = 'path', group_index = 2 },
-        { name = 'calc', group_index = 2 },
-        { name = 'emoji', group_index = 2 },
+        { name = 'buffer' },
+        { name = 'nvim_lsp' },
+        { name = 'nvim_lua' },
+        { name = 'luasnip' },
+        { name = 'path' },
+        { name = 'calc' },
+        { name = 'emoji' },
       }),
       formatting = {
         format = function(entry, vim_item)
-          -- fancy icons and a name of kind
-          -- vim_item.kind = lspkind.presets.default[vim_item.kind] .. ' ' .. vim_item.kind
+          lspkind.cmp_format({
+            mode = 'symbol_text',
+            maxwidth = 50,
+          })(entry, vim_item)
 
-          -- set a name for each source
-          -- local menu = source_mapping[entry.source.name]
-
-          -- fancy tabnine icon
-          -- if entry.source.name == 'cmp_tabnine' then
-          --   if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-          --     menu = entry.completion_item.data.detail .. ' ' .. menu
-          --   end
-          --   vim_item.kind = '' .. ' ' .. vim_item.kind
-          -- end
-
-          -- fancy copilot icon
-          if entry.source.name == 'copilot' then
-            vim_item.kind = '[] Copilot'
-            vim_item.kind_hl_group = 'CmpItemKindCopilot'
-            return vim_item
-          end
-
-          return lspkind.cmp_format({ maxwidth = 50 })(entry, vim_item)
-
-          -- vim_item.menu = menu
-          -- return vim_item
+          return require('tailwindcss-colorizer-cmp').formatter(entry, vim_item)
         end,
       },
-    })
+    }
   end,
   event = 'InsertEnter',
 }
