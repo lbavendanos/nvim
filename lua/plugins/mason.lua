@@ -15,6 +15,7 @@ return {
         'tsserver',
         'svelte',
         'astro',
+        'graphql',
         'jsonls',
         'html',
         'cssls',
