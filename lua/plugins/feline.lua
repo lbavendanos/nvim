@@ -1,5 +1,5 @@
 return {
-  'feline-nvim/feline.nvim',
+  'freddiehaddad/feline.nvim',
   config = function()
     local utils = require('core.utils.colors')
     local set_highlights = utils.set_highlights
@@ -258,7 +258,7 @@ return {
       },
       lsp_status = {
         provider = function()
-          return vim.tbl_count(vim.lsp.buf_get_clients(0)) == 0 and '' or '  '
+          return vim.tbl_count(vim.lsp.buf_get_clients(0)) == 0 and '' or ' 󰊕 '
         end,
         hl = 'UserSLStatus',
         left_sep = { str = '', hl = 'UserSLStatusBg', always_visible = true },
