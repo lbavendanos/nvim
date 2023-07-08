@@ -1,6 +1,5 @@
 return {
   { 'windwp/nvim-ts-autotag', event = 'InsertEnter' },
-  { 'mrjones2014/nvim-ts-rainbow', event = 'InsertEnter' },
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -13,7 +12,6 @@ return {
         },
         indent = { enable = true },
         autotag = { enable = true },
-        rainbow = { enable = true, extended_mode = false },
         context_commentstring = { enable = true, enable_autocmd = false },
         incremental_selection = {
           enable = true,
