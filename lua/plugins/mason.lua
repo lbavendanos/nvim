@@ -30,6 +30,7 @@ return {
         'eslint_d',
         'prettierd',
       },
+      automatic_installation = false,
     })
   end,
   cmd = 'Mason',
