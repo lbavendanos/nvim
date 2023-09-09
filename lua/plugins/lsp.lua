@@ -6,7 +6,7 @@ return {
     { 'folke/neoconf.nvim', cmd = 'Neoconf', config = true },
     { 'ray-x/lsp_signature.nvim', config = { hi_parameter = 'IncSearch' } },
     'nvim-telescope/telescope.nvim',
-    'glepnir/lspsaga.nvim',
+    'nvimdev/lspsaga.nvim',
     'folke/lsp-colors.nvim',
   },
   config = function()
