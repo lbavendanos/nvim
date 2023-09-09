@@ -52,6 +52,9 @@ return {
     config = function()
       require('catppuccin').setup({
         custom_highlights = groups,
+        integrations = {
+          lsp_saga = true,
+        },
       })
 
       vim.cmd('colorscheme catppuccin-mocha')
