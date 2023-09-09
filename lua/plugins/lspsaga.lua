@@ -4,7 +4,7 @@ return {
   config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {
-        separator = '  ',
+        enable = false,
       },
       rename = {
         in_select = false,
