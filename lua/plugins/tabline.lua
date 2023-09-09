@@ -1,8 +1,9 @@
 return {
   'kdheepak/tabline.nvim',
-  enabled = false,
+  dependencies = {
+    'nvim-lualine/lualine.nvim',
+  },
   config = {
-    enable = true,
     options = {
       modified_icon = ' ',
     },
