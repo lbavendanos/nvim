@@ -15,6 +15,7 @@ return {
   opts = function()
     local cmp = require('cmp')
     local lspkind = require('lspkind')
+    local tailwindcss_colorizer = require('tailwindcss-colorizer-cmp')
 
     return {
       snippet = {
@@ -47,9 +48,10 @@ return {
           lspkind.cmp_format({
             mode = 'symbol_text',
             maxwidth = 50,
+            ellipsis_char = '...',
           })(entry, vim_item)
 
-          return require('tailwindcss-colorizer-cmp').formatter(entry, vim_item)
+          return tailwindcss_colorizer.formatter(entry, vim_item)
         end,
       },
     }
