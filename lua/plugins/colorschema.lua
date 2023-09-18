@@ -15,7 +15,7 @@ local groups = {
 return {
   {
     'rebelot/kanagawa.nvim',
-    enabled = false,
+    enabled = true,
     lazy = false,
     priority = 1000,
     config = function()
@@ -25,7 +25,7 @@ return {
         end,
       })
 
-      vim.cmd('colorscheme kanagawa')
+      vim.cmd('colorscheme kanagawa-dragon')
     end,
   },
   {
@@ -46,7 +46,7 @@ return {
   {
     'catppuccin/nvim',
     name = 'catppuccin',
-    enabled = true,
+    enabled = false,
     lazy = false,
     priority = 1000,
     config = function()
