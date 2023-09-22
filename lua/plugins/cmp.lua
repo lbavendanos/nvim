@@ -11,6 +11,8 @@ return {
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
     'roobert/tailwindcss-colorizer-cmp.nvim',
+    'zbirenbaum/copilot.lua',
+    'zbirenbaum/copilot-cmp',
   },
   opts = function()
     local cmp = require('cmp')
@@ -35,6 +37,7 @@ return {
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       }),
       sources = cmp.config.sources({
+        { name = 'copilot' },
         { name = 'buffer' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
@@ -49,6 +52,7 @@ return {
             mode = 'symbol_text',
             maxwidth = 50,
             ellipsis_char = '...',
+            symbol_map = { Copilot = '' },
           })(entry, vim_item)
 
           return tailwindcss_colorizer.formatter(entry, vim_item)
