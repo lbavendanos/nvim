@@ -2,7 +2,7 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = {
     'williamboman/mason.nvim',
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
     'hrsh7th/nvim-cmp',
     { 'folke/neoconf.nvim', cmd = 'Neoconf', config = true },
     { 'folke/neodev.nvim', config = true },
