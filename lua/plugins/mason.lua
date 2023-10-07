@@ -32,5 +32,5 @@ return {
       },
     })
   end,
-  cmd = 'Mason',
+  cmd = { 'Mason', 'MasonToolsInstall', 'MasonToolsUpdate', 'MasonToolsClean' },
 }
