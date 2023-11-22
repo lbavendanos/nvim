@@ -4,7 +4,9 @@ return {
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
       'windwp/nvim-ts-autotag',
-      'JoosepAlviste/nvim-ts-context-commentstring',
+      { 'JoosepAlviste/nvim-ts-context-commentstring', opts = {
+        enable_autocmd = false,
+      } },
     },
     build = ':TSUpdate',
     event = 'BufReadPost',
@@ -17,7 +19,6 @@ return {
         },
         indent = { enable = true },
         autotag = { enable = true },
-        context_commentstring = { enable = true, enable_autocmd = false },
         incremental_selection = {
           enable = true,
           keymaps = {
