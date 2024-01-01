@@ -3,7 +3,7 @@ return {
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },
-  version = 'nightly',
+  version = '*',
   config = function()
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
