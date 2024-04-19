@@ -2,7 +2,7 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = {
     'williamboman/mason.nvim',
-    'nvimtools/none-ls.nvim',
+    { 'nvimtools/none-ls.nvim', dependencies = { 'nvimtools/none-ls-extras.nvim' } },
     'hrsh7th/nvim-cmp',
     { 'folke/neoconf.nvim', cmd = 'Neoconf', config = true },
     { 'folke/neodev.nvim', config = true },
@@ -73,8 +73,8 @@ return {
 
     local sources = {
       null_ls.builtins.formatting.stylua,
-      null_ls.builtins.diagnostics.eslint_d,
       null_ls.builtins.formatting.prettierd,
+      require('none-ls.diagnostics.eslint_d'),
     }
 
     null_ls.setup({
