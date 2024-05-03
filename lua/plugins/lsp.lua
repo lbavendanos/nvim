@@ -74,7 +74,7 @@ return {
     local sources = {
       null_ls.builtins.formatting.stylua,
       null_ls.builtins.formatting.prettierd,
-      require('none-ls.diagnostics.eslint_d'),
+      require('none-ls.diagnostics.eslint'),
     }
 
     null_ls.setup({
