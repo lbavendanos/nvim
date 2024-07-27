@@ -13,6 +13,7 @@ return {
     'roobert/tailwindcss-colorizer-cmp.nvim',
     'zbirenbaum/copilot.lua',
     'zbirenbaum/copilot-cmp',
+    'kristijanhusak/vim-dadbod-completion',
   },
   opts = function()
     local cmp = require('cmp')
@@ -45,6 +46,7 @@ return {
         { name = 'path' },
         { name = 'calc' },
         { name = 'emoji' },
+        { name = 'vim-dadbod-completion' },
       }),
       formatting = {
         format = function(entry, vim_item)
