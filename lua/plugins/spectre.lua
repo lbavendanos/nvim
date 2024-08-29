@@ -5,4 +5,16 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   cmd = { 'Spectre' },
+  opts = {
+    replace_engine = {
+      ['sed'] = {
+        cmd = 'sed',
+        args = {
+          '-i',
+          '',
+          '-E',
+        },
+      },
+    },
+  },
 }
