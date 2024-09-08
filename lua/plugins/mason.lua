@@ -12,7 +12,7 @@ return {
         'lua_ls',
         'vimls',
         'intelephense',
-        'tsserver',
+        'ts_ls',
         'svelte',
         'astro',
         'graphql',
