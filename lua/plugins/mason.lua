@@ -27,7 +27,7 @@ return {
     require('mason-tool-installer').setup({
       ensure_installed = {
         'stylua',
-        'eslint',
+        'eslint_d',
         'prettierd',
       },
     })
