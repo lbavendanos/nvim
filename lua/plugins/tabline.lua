@@ -3,9 +3,5 @@ return {
   dependencies = {
     'nvim-lualine/lualine.nvim',
   },
-  config = {
-    options = {
-      modified_icon = ' ',
-    },
-  },
+  config = true,
 }

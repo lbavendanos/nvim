@@ -3,12 +3,10 @@ return {
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },
-  config = function()
-    require('lualine').setup({
-      extensions = {
-        'nvim-tree',
-        'fugitive',
-      },
-    })
-  end,
+  opts = {
+    extensions = {
+      'nvim-tree',
+      'fugitive',
+    },
+  },
 }
