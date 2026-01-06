@@ -1,6 +1,20 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.ai.claudecode",
+    "lazyvim.plugins.extras.ai.copilot",
+    "lazyvim.plugins.extras.coding.mini-comment",
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.editor.neo-tree",
+    "lazyvim.plugins.extras.editor.refactoring",
+    "lazyvim.plugins.extras.formatting.prettier",
+    "lazyvim.plugins.extras.lang.php",
+    "lazyvim.plugins.extras.lang.sql",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.linting.eslint",
+    "lazyvim.plugins.extras.lsp.neoconf",
+    "lazyvim.plugins.extras.lsp.none-ls",
+    "lazyvim.plugins.extras.test.core"
   ],
   "install_version": 8,
   "news": {
