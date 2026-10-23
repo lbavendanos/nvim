@@ -152,5 +152,36 @@ return {
       block("warn", theme.diag.warning),
       block("error", palette.peachRed),
     }
+
+    -- Tabline (replaces kdheepak/tabline.nvim): buffers on the left, tabs on the right
+    -- scope.nvim keeps the buffer list scoped to the current tab
+    local tabline_colors = { active = "lualine_a_normal", inactive = "lualine_b_normal" }
+
+    opts.tabline = {
+      lualine_a = {
+        {
+          "buffers",
+          show_filename_only = false,
+          buffers_color = tabline_colors,
+          symbols = { modified = " +", alternate_file = "" },
+        },
+      },
+      lualine_z = {
+        {
+          "tabs",
+          -- custom name from :LualineRenameTab, otherwise the tab number
+          mode = 1,
+          tabs_color = tabline_colors,
+          fmt = function(name, context)
+            local ok, tabname = pcall(vim.api.nvim_tabpage_get_var, context.tabId, "tabname")
+            return ok and tabname ~= "" and name or tostring(context.tabnr)
+          end,
+          -- like tabline.nvim: only when there is more than one tab
+          cond = function()
+            return vim.fn.tabpagenr("$") > 1
+          end,
+        },
+      },
+    }
   end,
 }
