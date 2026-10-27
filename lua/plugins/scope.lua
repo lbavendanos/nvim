@@ -1,4 +1,6 @@
 return {
   "tiagovla/scope.nvim",
-  config = true,
+  event = "VeryLazy",
+  cmd = { "ScopeList", "ScopeSaveState", "ScopeLoadState" },
+  opts = {},
 }
