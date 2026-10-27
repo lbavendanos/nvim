@@ -1,14 +1,14 @@
 <!-- markdownlint-disable MD013 -->
 
-# AGENTS.md
+# Neovim Config
+
+Personal Neovim configuration built on [LazyVim](https://www.lazyvim.org/), using [lazy.nvim](https://github.com/folke/lazy.nvim) as the plugin manager. Plugins are added and customized following LazyVim's conventions so they behave as if they shipped with the distribution.
 
 ## Before You Start
 
 **Always consult Context7 MCP before making changes.** When adding or modifying plugin configurations, use Context7 to query the official documentation of the plugins/libraries involved. This ensures configurations follow current best practices and use up-to-date APIs.
 
-## Repository
-
-LazyVim-based Neovim configuration using lazy.nvim as plugin manager.
+## Structure
 
 - `lua/config/` - Core configuration (lazy.nvim setup, options, keymaps, autocmds)
 - `lua/plugins/` - Plugin specifications (one file per plugin)
