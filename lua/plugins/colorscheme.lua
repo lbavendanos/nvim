@@ -27,9 +27,10 @@ return {
 
           -- blink completion menu: same pattern as the floats (transparent, rounded border), selection keeps its bg
           BlinkCmpMenu = { fg = theme.ui.pmenu.fg, bg = "none" },
-          BlinkCmpMenuBorder = { link = "FloatBorder" },
+          -- accent border: tells the completion menu apart from the other (neutral) floats
+          BlinkCmpMenuBorder = { fg = palette.dragonBlue, bg = "none" },
           -- the scrollbar sits on the border column: border-colored so it doesn't look like the selection overflowing
-          BlinkCmpScrollBarThumb = { bg = theme.ui.float.fg_border },
+          BlinkCmpScrollBarThumb = { bg = palette.dragonBlue },
           BlinkCmpScrollBarGutter = { bg = "none" },
           -- right-hand details (module path, source) dimmed like a comment, without the pmenu bg
           BlinkCmpLabelDescription = { fg = theme.syn.comment, bg = "none" },
