@@ -10,6 +10,11 @@ local function kind_icon_hl(kind_hl)
   return group
 end
 
+-- blink renders the cmdline menu while in command-line mode
+local function in_cmdline()
+  return vim.api.nvim_get_mode().mode == "c"
+end
+
 return {
   {
     "saghen/blink.cmp",
@@ -23,17 +28,32 @@ return {
             columns = { { "kind_icon" }, { "label", "label_description", gap = 1 }, { "kind" } },
             components = {
               kind_icon = {
+                -- cmdline: no trailing space, the column gap already separates it from the label
                 text = function(ctx)
-                  return " " .. vim.trim(ctx.kind_icon) .. " "
+                  return " " .. vim.trim(ctx.kind_icon) .. (in_cmdline() and "" or " ")
                 end,
-                -- above the cursorline (10000) so the block keeps its bg on the selected item
+                -- above the cursorline (10000) so the block keeps its bg on the selected item;
+                -- cmdline: plain menu fg, without the colored block
                 highlight = function(ctx)
+                  if in_cmdline() then
+                    return "BlinkCmpMenu"
+                  end
                   return { { group = kind_icon_hl(ctx.kind_hl), priority = 20000 } }
                 end,
               },
               kind = {
                 highlight = "BlinkCmpLabelDescription",
               },
+            },
+          },
+        },
+      },
+      -- cmdline: LazyVim's default columns, without the atom kind column
+      cmdline = {
+        completion = {
+          menu = {
+            draw = {
+              columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
             },
           },
         },
