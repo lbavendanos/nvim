@@ -16,7 +16,54 @@ return {
         local palette = colors.palette
         local theme = colors.theme
 
-        return {
+        -- completion kinds: vivid palette colors (dragon's syntax colors are too muted for the colored icon blocks),
+        -- grouped by family like NvChad: callables blue, members red, variables violet, literals orange...
+        local kinds = {
+          Array = palette.springViolet2,
+          Boolean = palette.surimiOrange,
+          Class = palette.waveAqua2,
+          Codeium = palette.waveAqua2,
+          Color = palette.fujiWhite,
+          Constant = palette.surimiOrange,
+          Constructor = palette.crystalBlue,
+          Copilot = palette.springGreen,
+          Enum = palette.crystalBlue,
+          EnumMember = palette.oniViolet,
+          Event = palette.carpYellow,
+          Field = palette.waveRed,
+          File = palette.fujiWhite,
+          Folder = palette.carpYellow,
+          Function = palette.crystalBlue,
+          Interface = palette.springGreen,
+          Key = palette.waveRed,
+          Keyword = palette.springViolet2,
+          Method = palette.crystalBlue,
+          Module = palette.carpYellow,
+          Namespace = palette.carpYellow,
+          Null = palette.peachRed,
+          Number = palette.surimiOrange,
+          Object = palette.springViolet2,
+          Operator = palette.oldWhite,
+          Package = palette.carpYellow,
+          Property = palette.waveRed,
+          Reference = palette.oldWhite,
+          Snippet = palette.sakuraPink,
+          String = palette.springGreen,
+          Struct = palette.oniViolet,
+          Supermaven = palette.carpYellow,
+          TabNine = palette.sakuraPink,
+          Text = palette.springGreen,
+          TypeParameter = palette.waveRed,
+          Unit = palette.oniViolet,
+          Value = palette.springBlue,
+          Variable = palette.oniViolet,
+        }
+        local kind_hls = {}
+        for kind, color in pairs(kinds) do
+          kind_hls["BlinkCmpKind" .. kind] = { fg = color }
+        end
+
+        return vim.tbl_extend("error", kind_hls, {
           Normal = { bg = "none" },
 
           -- floats (lsp hover, diagnostics, docs...) follow the transparent background, only the border shows
@@ -35,6 +82,8 @@ return {
           -- right-hand details (module path, source) dimmed like a comment, without the pmenu bg
           BlinkCmpLabelDescription = { fg = theme.syn.comment, bg = "none" },
           BlinkCmpSource = { fg = theme.syn.comment, bg = "none" },
+          -- base each kind's icon block bg is tinted from (lua/plugins/blink.lua)
+          BlinkCmpKindIconBg = { bg = theme.ui.bg_p1 },
 
           -- gitsigns: use the dragon palette instead of the generic autumn vcs colors
           GitSignsAdd = { fg = palette.dragonGreen2, bg = theme.ui.bg_gutter },
@@ -52,7 +101,7 @@ return {
           -- lualine path block: bright filename, softer directory (readable on the lighter block)
           LualineFilename = { fg = palette.fujiWhite, bold = true },
           LualineDirectory = { fg = palette.dragonWhite },
-        }
+        })
       end,
     },
   },
@@ -65,6 +114,46 @@ return {
           added = "+",
           modified = "~",
           removed = "-",
+        },
+        -- NvChad's lspkind icons (nvchad/ui lua/nvchad/icons/lspkind.lua); Array uses a glyph instead of NvChad's "[]", kinds it lacks keep LazyVim's
+        kinds = {
+          Array = "󰅪 ",
+          Boolean = " ",
+          Class = "󰠱 ",
+          Codeium = " ",
+          Color = "󱓻 ",
+          Constant = "󰏿 ",
+          Constructor = " ",
+          Copilot = " ",
+          Enum = " ",
+          EnumMember = " ",
+          Event = " ",
+          Field = "󰜢 ",
+          File = "󰈚 ",
+          Folder = "󰉋 ",
+          Function = "󰆧 ",
+          Interface = " ",
+          Keyword = "󰌋 ",
+          Method = "󰆧 ",
+          Module = " ",
+          Namespace = "󰌗 ",
+          Null = "󰟢 ",
+          Number = " ",
+          Object = "󰅩 ",
+          Operator = "󰆕 ",
+          Package = " ",
+          Property = "󰜢 ",
+          Reference = "󰈇 ",
+          Snippet = " ",
+          String = "󰉿 ",
+          Struct = "󰙅 ",
+          Supermaven = " ",
+          TabNine = " ",
+          Text = "󰉿 ",
+          TypeParameter = "󰊄 ",
+          Unit = "󰑭 ",
+          Value = "󰎠 ",
+          Variable = "󰀫 ",
         },
       },
     },
